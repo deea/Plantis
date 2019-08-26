@@ -1,6 +1,4 @@
 class PlantsController < ApplicationController
-  mount_uploader :photo, PhotoUploader
-
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
 
   def index
