@@ -1,2 +1,35 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<body>
+  <div class="main-container">
+    <div class="banner">
+      <div class="header">
+        <h1>Extend the life of your plants while earning rewards</h1>
+      </div>
+    </div>
+    <div class="how-it-works">
+      <h2>How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <h4>Create your Jungle</h4>
+            <br>
+            <%= image_tag "request.png", alt: "img", id:"step-img" %>
+            <br>
+            <p>Sign up and start adding your plants to your personal jungle</p>
+          </div>
+          <div class="step">
+            <h4>Set goals</h4>
+            <br>
+            <%= image_tag "browse.png", alt: "img", id:"step-img" %>
+            <br>
+            <p>Set goals and keep your plants alive by following your watering calendar</p>
+          </div>
+          <div class="step">
+            <h4>Earn rewards</h4>
+            <br>
+            <%= image_tag "delivery.png", alt: "img", id:"step-img" %>
+            <br>
+            <p>Once your task completed, you'll earn seeds that could get you rewards</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
