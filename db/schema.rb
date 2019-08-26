@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_100428) do
+ActiveRecord::Schema.define(version: 2019_08_26_110957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "plant_types", force: :cascade do |t|
+    t.string "name"
+    t.integer "water_freq"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "plants", force: :cascade do |t|
+    t.string "name"
+    t.string "photo"
+    t.date "last_watered"
+    t.bigint "user_id"
+    t.bigint "plant_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plant_type_id"], name: "index_plants_on_plant_type_id"
+    t.index ["user_id"], name: "index_plants_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +46,6 @@ ActiveRecord::Schema.define(version: 2019_08_26_100428) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "plants", "plant_types"
+  add_foreign_key "plants", "users"
 end
