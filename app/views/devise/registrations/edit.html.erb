@@ -6,10 +6,8 @@
   <div class="form-inputs">
     <%= f.input :firstname, label:"First name", required: true %>
     <%= f.input :lastname, label:"Last name", required: true %>
-    <% if false %>
     <%= f.input :photo, class: "insert-photo" %>
     <%= f.input :photo_cache, as: :hidden %>
-    <% end %>
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
