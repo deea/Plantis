@@ -1,0 +1,35 @@
+.banner-my-jungle {
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("banner2.jpg");
+  height: 220px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.seed-status-container {
+  display: flex;
+  margin: 25px 45px 25px 70px;
+  align-items: center;
+}
+
+.jungle-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.seed-status-container .btn-add-container {
+  margin-left: auto; /*new*/
+}
+
+.seed-status-text {
+  margin-left: 20px;
+
+}
+
+.seed-status-text > p {
+  margin-bottom: 0px;
+}
