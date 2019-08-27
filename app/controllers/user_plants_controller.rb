@@ -1,4 +1,11 @@
 class UserPlantsController < ApplicationController
+  def index
+    @user_plants = User_Plant.all
+  end
+
+  def show
+  end
+  
   def new
     @user_plant = UserPlant.new
     if params[:plant_id]
@@ -18,8 +25,11 @@ class UserPlantsController < ApplicationController
   end
 
   private
+  def set_plant
+    @user_plant = Plant.find(params[:id])
+  end
 
   def plant_params
-    params.require(:user_plant).permit(:name, :photo, :last_watered)
+    params.require(:plant).permit(:name, :photo, :last_watered)
   end
 end

@@ -1,14 +1,14 @@
 // Specific CSS for your home-page
 
-h1 {
-  padding-top: 100px;
+body {
+  padding-top: 45px;
   transform: translate (-50%, -50%);
   opacity: 0.9;
 }
 
 .banner {
   width: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("banner.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("masthead.jpg");
   height: 600px;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,6 +16,10 @@ h1 {
   position: relative;
   color: white;
   text-align: center;
+}
+
+.header {
+  padding-top: 120px;
 }
 
 .how-it-works {

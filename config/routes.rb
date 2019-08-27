@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  get 'user_plants/index'
+  get 'user_plants/show'
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
   resources :plants
   resources :user_plants
-
+  resources :plant_types, only: [ :index, :show ]
+  get "my_jungle", to: 'plants#my_jungle'
 end
