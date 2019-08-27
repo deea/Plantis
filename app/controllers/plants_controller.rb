@@ -10,6 +10,11 @@ class PlantsController < ApplicationController
 
   def new
     @plant = Plant.new
+    if params[:plant_type]
+      @plant_type = PlantType.find(params[:plant_type])
+    else
+      redirect_to plant_types_path
+    end
   end
 
   def create
