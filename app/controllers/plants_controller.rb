@@ -1,6 +1,4 @@
 class PlantsController < ApplicationController
-  before_action :set_plant, only: [:show, :edit, :update, :destroy]
-
   def index
     @plants = Plant.all
   end
@@ -34,10 +32,6 @@ class PlantsController < ApplicationController
 
   def destroy
     @plant.destroy
-  end
-
-  def my_jungle
-    @plants = current_user.user_plants
   end
 
   private

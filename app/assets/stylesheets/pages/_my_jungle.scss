@@ -10,17 +10,34 @@
   text-align: center;
 }
 
-.seed-status-container {
-  display: flex;
-  margin: 25px 45px 25px 70px;
-  align-items: center;
+.jungle-content {
+  margin-left: 40px;
+  margin-right: 40px;
 }
+
+.jungle-header {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 
 .jungle-card-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
+.seed-status-container {
+  display: flex;
+  margin: 25px 30px 25px 30px;
+  align-items: center;
+}
 .seed-status-container .btn-add-container {
   margin-left: auto; /*new*/
 }

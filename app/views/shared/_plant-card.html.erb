@@ -2,10 +2,13 @@
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
   <div class="card-trip-infos">
     <div>
-      <h2>Title here</h2>
+      <h2> Plant Nickname</h2>
       <p>Short description here!</p>
     </div>
     <h2 class="card-trip-pricing">£99.99</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    <!-- this if statement needs to be update - if needs watered -->
+    <% if [true, false].sample %>
+     <i class="fas fa-tint water-logo"></i>
+    <% end %>
   </div>
 </div>
