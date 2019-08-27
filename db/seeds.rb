@@ -1,7 +1,7 @@
 puts 'Cleaning database...'
-Plant.destroy_all
-User.destroy_all
 UserPlant.destroy_all
+User.destroy_all
+Plant.destroy_all
 puts 'Creating plants...'
 
 # Plant seeds with img urls
@@ -25,7 +25,7 @@ aloe_vera = Plant.create!(
   remote_photo_url:      aloe,
   water_freq:  2,
  )
- 
+
 peace_lily = Plant.create!(
   name:         'Peace Lily',
   latin_name: 'Spathiphyllum Wallisii',
@@ -109,7 +109,7 @@ jimmy_plant = UserPlant.create!(
     nickname: 'Jimmy',
     last_watered: DateTime.current - 2,
     plant: spider_plant,
-    user: jenni
+    user: henry
 )
 
 benji = UserPlant.create!(
