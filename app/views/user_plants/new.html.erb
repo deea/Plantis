@@ -1,0 +1,17 @@
+<h1>Add a new plant to your jungle</h1>
+<h1>Add a new plant to your jungle</h1>
+<h3>
+  Let us know a little more about your <%= @plant.name %> plant
+</h3>
+
+
+
+<div class="form">
+<%= simple_form_for @user_plant do |f| %>
+  <%= f.input :nickname  %>
+  <%= f.input :last_watered %>
+  <%= f.input :plant_id, as: "hidden", input_html: { value: @plant.id } %>
+  <%= f.input :photo, class: "insert-photo" %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<%end %>
+</div>

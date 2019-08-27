@@ -10,5 +10,4 @@ class UserPlantsControllerTest < ActionDispatch::IntegrationTest
     get user_plants_show_url
     assert_response :success
   end
-
 end
