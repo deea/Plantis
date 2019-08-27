@@ -1,18 +1,19 @@
 class UserPlantsController < ApplicationController
   def index
-    @user_plants = User_Plant.all
+    @user_plants = policy_scope(UserPlant).order(created_at: :desc)
   end
 
   def show
   end
-  
+
   def new
-    @user_plant = UserPlant.new
+    @user_plant = UserPlant.new(user: current_user)
     if params[:plant_id]
       @plant = Plant.find(params[:plant_id])
     else
       redirect_to plants_path
     end
+    authorize @user_plant
   end
 
   def create
@@ -22,6 +23,7 @@ class UserPlantsController < ApplicationController
     else
       render :new
     end
+    authorize @user_plant
   end
 
   private
