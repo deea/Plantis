@@ -1,0 +1,12 @@
+<h1>Add a new plant to your jungle</h1>
+<h3>
+  Select the type of plant you would like to add
+</h3>
+
+<ul>
+  <% @plants.each do |plant| %>
+  <li>
+  <%= link_to plant.name, new_user_plant_path(plant_id: plant.id) %>
+  </li>
+  <% end %>
+</ul>
