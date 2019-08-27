@@ -26,6 +26,10 @@ class UserPlantsController < ApplicationController
     authorize @user_plant
   end
 
+  def my_jungle
+    @plants = current_user.user_plants
+  end
+
   private
   def set_plant
     @user_plant = Plant.find(params[:id])

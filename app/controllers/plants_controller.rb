@@ -34,10 +34,6 @@ class PlantsController < ApplicationController
     @plant.destroy
   end
 
-  def my_jungle
-    @plants = current_user.user_plants
-  end
-
   private
 
   def set_plant
