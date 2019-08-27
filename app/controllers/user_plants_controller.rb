@@ -5,7 +5,7 @@ class UserPlantsController < ApplicationController
 
   def show
   end
-  
+
   def new
     @user_plant = UserPlant.new
     if params[:plant_id]
@@ -22,6 +22,10 @@ class UserPlantsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def my_jungle
+    @plants = current_user.user_plants
   end
 
   private
