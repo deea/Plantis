@@ -1,1 +1,41 @@
 // Specific CSS for your home-page
+
+h1 {
+  padding-top: 100px;
+  transform: translate (-50%, -50%);
+  opacity: 0.9;
+}
+
+.banner {
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("banner.jpg");
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.how-it-works {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.steps {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#step-img {
+  width: 75%;
+  box-shadow: 2px 2px 4px rgb(200,200,200);
+  border-radius: 5px;
+}
+
+.step {
+  width: 25%;
+}
