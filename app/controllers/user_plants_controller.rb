@@ -27,7 +27,7 @@ class UserPlantsController < ApplicationController
   end
 
   def my_jungle
-    @plants = current_user.user_plants
+    @user_plants = current_user.user_plants
   end
 
   private

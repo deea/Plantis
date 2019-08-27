@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :plants
   resources :user_plants
   resources :plant_types, only: [ :index, :show ]
-  get "my_jungle", to: 'plants#my_jungle'
+
 end
