@@ -1,6 +1,6 @@
 <div class="banner-my-seeds">
   <div class="user-profile-header">
-      <%= cl_image_tag current_user.photo, class: "avatar-profile" %>
+      <%= cl_image_tag current_user.photo, :gravity=>"face", :width=>234, :height=>234, :crop=>"thumb", class: "avatar-profile" %>
       <h1><%= @user.firstname%> <%= @user.lastname%></h1>
   </div>
   <div class="profile-content">
