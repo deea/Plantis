@@ -22,6 +22,7 @@
   <div class="jungle-card-container">
     <% @user_plants.each do |plant| %>
       <%= render 'shared/user-plant-card', plant: plant  %>
+      <%= render './shared/modal-info', plant: plant %>
     <% end %>
   </div>
 </div>

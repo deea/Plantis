@@ -1,9 +1,19 @@
 .modal {
   top: 90px;
+
 }
 
+.modal-content {
+  border-radius: 15px !important;
+}
 .modal-photo > img {
-  height: 200px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
