@@ -1,15 +1,38 @@
-<% @user_plants.each do |plant| %>
-  <div class="card-plant">
-    <%= cl_image_tag plant.plant.photo %>
-    <div class="card-trip-infos">
-      <div>
-        <h2> <%= plant.nickname %></h2>
-        <p> Last watered: <%= plant.last_watered %></p>
+  <% @user_plants.each do |plant| %>
+<a href="#modal-show" data-toggle="modal" data-target="#modal-show">
+    <div class="card-plant">
+      <%= cl_image_tag plant.plant.photo %>
+      <div class="card-trip-infos">
+        <div>
+          <h2> <%= plant.nickname %></h2>
+          <p> Last watered: <%= plant.last_watered %></p>
+        </div>
+        <!-- this if statement needs to be update - if needs watered -->
+        <% if plant.needs_water? %>
+         <i class="fas fa-tint water-logo"></i>
+        <% end %>
       </div>
-      <!-- this if statement needs to be update - if needs watered -->
-      <% if plant.needs_water? %>
-       <i class="fas fa-tint water-logo"></i>
-      <% end %>
+    </div>
+</a>
+<div class="modal fade" id="modal-show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> <%= plant.nickname %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-photo">
+        <%= cl_image_tag plant.plant.photo %>
+      </div>
+      <div class="modal-body">
+        <p> <%= plant.days_until_water.to_i %> days until water! </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
-<% end %>
+</div>
+  <% end %>
