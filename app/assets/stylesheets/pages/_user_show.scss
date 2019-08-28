@@ -1,0 +1,17 @@
+.banner-my-seeds {
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("seeds.jpeg");
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+
+.user-profile-header {
+  text-align: center;
+  color: white;
+  padding-top: 150px;
+}
+
+.avatar-profile {
+  border-radius: 50%;
+  border: 2px solid rgb(220,220,220)
+}
