@@ -17,7 +17,8 @@ class UserPlantsController < ApplicationController
   end
 
   def create
-    @user_plant = Plant.new(user_plant_params)
+    @user_plant = UserPlant.new(user_plant_params)
+    @user_plant.user = current_user
     if @user_plant.save
       redirect_to my_jungle_path
     else
@@ -31,11 +32,12 @@ class UserPlantsController < ApplicationController
   end
 
   private
+
   def set_plant
     @user_plant = Plant.find(params[:id])
   end
 
-  def plant_params
-    params.require(:plant).permit(:name, :photo, :last_watered)
+  def user_plant_params
+    params.require(:user_plant).permit(:nickname, :photo, :last_watered, :plant_id, :user_id)
   end
 end
