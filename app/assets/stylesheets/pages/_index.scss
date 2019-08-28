@@ -1,3 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "my_jungle";
+@import "plants";
+
+a:hover {
+  text-decoration: none;
+}

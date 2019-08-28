@@ -20,7 +20,7 @@ class UserPlantsController < ApplicationController
     @user_plant = UserPlant.new(user_plant_params)
     @user_plant.user = current_user
     if @user_plant.save
-      redirect_to my_jungle_path
+      redirect_to user_plants_path
     else
       render :new
     end

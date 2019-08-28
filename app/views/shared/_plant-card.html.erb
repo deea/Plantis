@@ -1,15 +1,11 @@
-<% @user_plants.each do |plant| %>
-  <div class="card-plant">
-    <%= cl_image_tag plant.plant.photo %>
-    <div class="card-trip-infos">
-      <div>
-        <h2> <%= plant.nickname %></h2>
-        <p> Last watered: <%= plant.last_watered %></p>
+  <% @plants.each do |plant| %>
+    <%= link_to new_user_plant_path(plant_id: plant.id) do %>
+      <div class="card-product">
+        <%= cl_image_tag ( plant.photo ) %>
+        <div class="card-product-infos">
+          <p id="plant-name"><%= plant.name %></p>
+          <p id="plant-latin-name"><%= plant.latin_name %></p>
+        </div>
       </div>
-      <!-- this if statement needs to be update - if needs watered -->
-      <% if [true, false].sample %>
-       <i class="fas fa-tint water-logo"></i>
-      <% end %>
-    </div>
-  </div>
-<% end %>
+    <% end %>
+  <% end %>
