@@ -1,0 +1,15 @@
+<% @user_plants.each do |plant| %>
+  <div class="card-plant">
+    <%= cl_image_tag plant.plant.photo %>
+    <div class="card-trip-infos">
+      <div>
+        <h2> <%= plant.nickname %></h2>
+        <p> Last watered: <%= plant.last_watered %></p>
+      </div>
+      <!-- this if statement needs to be update - if needs watered -->
+      <% if [true, false].sample %>
+       <i class="fas fa-tint water-logo"></i>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,44 @@
+.card-plant {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  min-width: 260px;
+  max-width: 260px;
+  margin: 30px;
+  border-radius: 1%;
+}
+
+.card-plant > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-plant h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-plant p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-plant .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.water-logo {
+    position: absolute;
+    right: 11px;
+    bottom: 251px;
+    width: 40px;
+    font-size: 32px;
+}
