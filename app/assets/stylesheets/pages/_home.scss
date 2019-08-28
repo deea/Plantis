@@ -8,7 +8,7 @@ body {
 
 .banner {
   width: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("masthead.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("banner.png");
   height: 600px;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,6 +16,7 @@ body {
   position: relative;
   color: white;
   text-align: center;
+  text-shadow: 1px 1px 4px rgb(100,100,100);
 }
 
 .header {
