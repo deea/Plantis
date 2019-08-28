@@ -44,9 +44,13 @@
 
 .seed-status-text {
   margin-left: 20px;
+  text-decoration: none;
 
 }
 
+a {
+  color: black;
+}
 .seed-status-text > p {
   margin-bottom: 0px;
 }

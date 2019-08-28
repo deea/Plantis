@@ -27,6 +27,12 @@ class UserPlantsController < ApplicationController
     authorize @user_plant
   end
 
+  # def water_plants
+  #   @user_plant
+  #   current_user.addseeds
+  #   redirect_to
+  # end
+
   def my_jungle
     @user_plants = current_user.user_plants
   end

@@ -6,3 +6,4 @@ flatpickr("#user_plant_last_watered", {
   dateFormat: "d/m/Y",
   maxDate: "today"
 })
+

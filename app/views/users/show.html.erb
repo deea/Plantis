@@ -1,0 +1,26 @@
+<div class="banner-my-seeds">
+  <div class="user-profile-header">
+      <%= cl_image_tag current_user.photo, class: "avatar-profile" %>
+      <h1><%= @user.firstname%> <%= @user.lastname%></h1>
+  </div>
+  <div class="profile-content">
+    <div class="level">
+      <h2>Level: 3</h2>
+    </div>
+    <div class="current-seeds">
+        <h2>Seeds</h2>
+        <div class="progress">
+          <div class="progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <p>1234 seeds</p>
+    </div>
+  </div>
+</div>
+<div class="rewards">
+  <div class="level-1-reward">
+  </div>
+  <div class="level-2-reward">
+  </div>
+</div>
+
