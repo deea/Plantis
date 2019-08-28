@@ -1,6 +1,6 @@
 .banner-my-seeds {
   background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("seeds.jpeg");
-  height: 600px;
+  height: 700px;
   background-position: center;
   background-size: cover;
 }
@@ -8,10 +8,27 @@
 .user-profile-header {
   text-align: center;
   color: white;
-  padding-top: 150px;
+  text-shadow: 1px 1px 2px rgb(30,30,30);
+  padding-top: 100px;
 }
 
 .avatar-profile {
   border-radius: 50%;
   border: 2px solid rgb(220,220,220)
 }
+
+.level {
+  color: white;
+  text-shadow: 1px 1px 2px rgb(30,30,30);
+}
+.current-seeds {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px rgb(30,30,30);
+}
+
+.progress {
+  width: 500px;
+  margin: auto;
+}
+

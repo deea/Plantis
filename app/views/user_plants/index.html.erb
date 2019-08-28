@@ -8,8 +8,10 @@
   <div class="seed-status-container">
     <%= render './shared/user-avatar' %>
     <div class="seed-status-text">
-      <p> <%= current_user.firstname %></p>
-      <h5>1,785 seeds!</h5>
+        <%= link_to user_path(current_user) do %>
+          <p> <%= current_user.firstname %></p>
+          <h5>1,785 seeds!</h5>
+        <% end %>
     </div>
     <div class="btn-add-container">
       <button type="button" class="btn btn-primary">Add Plant</button>
