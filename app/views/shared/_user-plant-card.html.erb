@@ -7,7 +7,7 @@
         <p> Last watered: <%= plant.last_watered %></p>
       </div>
       <!-- this if statement needs to be update - if needs watered -->
-      <% if [true, false].sample %>
+      <% if plant.needs_water? %>
        <i class="fas fa-tint water-logo"></i>
       <% end %>
     </div>
