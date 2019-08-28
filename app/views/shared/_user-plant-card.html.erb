@@ -1,5 +1,4 @@
-  <% @user_plants.each do |plant| %>
-<a href="#modal-show" data-toggle="modal" data-target="#modal-show">
+<a href="#modal-show<%= plant.id %>" class="card-link" data-toggle="modal" data-target="#modal-show<%= plant.id %>">
     <div class="card-plant">
       <%= cl_image_tag plant.plant.photo %>
       <div class="card-trip-infos">
@@ -14,7 +13,7 @@
       </div>
     </div>
 </a>
-<div class="modal fade" id="modal-show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-show<%= plant.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -27,7 +26,7 @@
         <%= cl_image_tag plant.plant.photo %>
       </div>
       <div class="modal-body">
-        <p> <%= plant.days_until_water.to_i %> days until water! </p>
+        <p> <i class="fas fa-calendar-day"></i> <%= plant.days_until_water %> days until water! </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -35,4 +34,3 @@
     </div>
   </div>
 </div>
-  <% end %>

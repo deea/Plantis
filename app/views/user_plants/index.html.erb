@@ -20,10 +20,9 @@
     </div>
   </div>
   <div class="jungle-card-container">
-    <%= render './shared/user-plant-card' %>
-    <%= render './shared/user-plant-card' %>
-    <%= render './shared/user-plant-card' %>
-    <%= render './shared/user-plant-card' %>
+    <% @user_plants.each do |plant| %>
+      <%= render 'shared/user-plant-card', plant: plant  %>
+    <% end %>
   </div>
 </div>
 

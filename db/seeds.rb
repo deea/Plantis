@@ -140,4 +140,25 @@ grace = UserPlant.create!(
   user: chris
 )
 
+dawny = UserPlant.create!(
+  nickname: 'Dawny',
+  last_watered: DateTime.current - 4,
+  plant: peace_lily,
+  user: chris
+)
+
+benjie = UserPlant.create!(
+  nickname: 'Benjie',
+  last_watered: DateTime.current - 3,
+  plant: aloe_vera,
+  user: chris
+)
+
+jimmy_planty = UserPlant.create!(
+    nickname: 'Jimmie',
+    last_watered: DateTime.current - 2,
+    plant: spider_plant,
+    user: chris
+)
+
 puts 'Finished!'

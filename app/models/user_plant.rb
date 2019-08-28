@@ -8,6 +8,7 @@ class UserPlant < ApplicationRecord
   end
 
   def days_until_water
-    @days = Date.today - last_watered
+    @days = (Date.today - last_watered).to_i
   end
+
 end
