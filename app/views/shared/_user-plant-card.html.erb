@@ -1,6 +1,6 @@
 <% @user_plants.each do |plant| %>
   <div class="card-plant">
-    <%= cl_image_tag plant.plant.photo, :width=>260, :height=>200, :gravity=>"auto", :crop=>"fill" %>
+    <%= cl_image_tag plant.photo, :width=>260, :height=>200, :gravity=>"auto", :crop=>"fill" %>
     <div class="card-trip-infos">
       <div>
         <h2> <%= plant.nickname %></h2>
