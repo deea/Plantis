@@ -6,7 +6,11 @@ class UserPlantPolicy < ApplicationPolicy
   end
 
   def new?
-    record.user == @user
+    true
+  end
+
+  def water_plant?
+    record.user == user
   end
 
   def create?
