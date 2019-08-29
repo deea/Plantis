@@ -6,6 +6,20 @@
 .modal-content {
   border-radius: 15px !important;
 }
+
+.modal-header {
+      display: flex;
+      justify-content: flex-start;   /* adjustment */
+      position: relative;            /* new */
+
+h4 {
+      flex: 0 1 auto;
+      position: absolute;             /* new */
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
 .modal-photo > img {
   height: 300px;
   width: 100%;
@@ -16,4 +30,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body > h5 {
+  padding: 10px;
 }

@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :plants
   resources :user_plants
   resources :plant_types, only: [ :index, :show ]
-
+  patch "water/:id", to: "user_plants#water_plant", as: :water_plant
 end

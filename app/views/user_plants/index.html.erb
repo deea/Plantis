@@ -4,10 +4,6 @@
   </div>
 </div>
 
-<% if @user_plants.first.needs_water?%>
-  <p>water</p>
-<% end %>
-
 <div class="jungle-content">
   <div class="seed-status-container">
     <%= render './shared/user-avatar' %>
@@ -16,13 +12,18 @@
       <h5>1,785 seeds!</h5>
     </div>
     <div class="btn-add-container">
-      <button type="button" class="btn btn-primary">Add Plant</button>
+      <%= link_to "Add Plant", new_user_plant_path, class: "btn btn-primary" %>
+<!--       <button type="button" class="btn btn-primary">Add Plant</button> -->
     </div>
   </div>
   <div class="jungle-card-container">
     <% @user_plants.each do |plant| %>
       <%= render 'shared/user-plant-card', plant: plant  %>
-      <%= render './shared/modal-info', plant: plant %>
+      <% if plant.needs_water? %>
+        <%= render './shared/modal-water', plant: plant %>
+      <% else %>
+        <%= render './shared/modal-info', plant: plant %>
+      <% end %>
     <% end %>
   </div>
 </div>
