@@ -9,7 +9,7 @@
     <%= render './shared/user-avatar' %>
     <div class="seed-status-text">
       <p> <%= current_user.firstname %></p>
-      <h5>1,785 seeds!</h5>
+      <h5><%= current_user.seeds %> seeds!</h5>
     </div>
     <div class="btn-add-container">
       <%= link_to "Add Plant", new_user_plant_path, class: "btn btn-primary" %>
