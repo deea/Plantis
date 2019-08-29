@@ -1,15 +1,17 @@
 <body>
   <div class="main-container">
     <div class="banner">
-      <div class="header">
-        <h1>Extend the life of your plants while earning rewards</h1>
+      <div class="home-header">
+        <h1><strong>Houseplant killer?</strong></h1>
+        <p>Plantis helps you look after your house plants by reminding you</p>
+        <p>when each plant is thirsty.</p>
         <% if user_signed_in? && current_user.user_plants.count > 0 %>
-          <%= link_to 'Visit your jungle', user_plants_path, class: 'btn btn-primary' %>
-          <%= link_to 'Add to your jungle', plants_path, class: 'btn btn-primary' %>
+          <%= link_to 'Visit your jungle', user_plants_path, class: 'btn btn-primary btn-banner' %>
+          <%= link_to 'Add to your jungle', plants_path, class: 'btn btn-primary btn-banner' %>
         <% elsif user_signed_in? && current_user.user_plants.count == 0 %>
-          <%= link_to 'Start your jungle', plants_path, class: 'btn btn-primary' %>
+          <%= link_to 'Start your jungle', plants_path, class: 'btn btn-primary btn-banner' %>
         <% else %>
-          <%= link_to 'Start your jungle', new_user_registration_path, class: 'btn btn-primary' %>
+          <%= link_to 'Start your jungle', new_user_registration_path, class: 'btn btn-primary btn-banner' %>
         <% end%>
       </div>
     </div>
