@@ -5,11 +5,11 @@
   min-width: 260px;
   max-width: 260px;
   margin: 30px;
-  border-radius: 1%;
+  border-radius: 15px;
 }
 
 .card-plant > img {
-  height: 200px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -38,7 +38,12 @@
 .water-logo {
     position: absolute;
     right: 11px;
-    bottom: 251px;
+    bottom: 235px;
     width: 40px;
     font-size: 32px;
 }
+
+.card-link {
+  color: $primary_text;
+}
+

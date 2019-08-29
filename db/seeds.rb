@@ -36,13 +36,13 @@ weeping_fig = Plant.create!(
     name:         'Weeping Fig',
     latin_name: 'Ficus Benjamina',
     remote_photo_url:      fig,
-    water_freq:  5,
+    water_freq:  9,
 )
 moth_orchid = Plant.create!(
     name:         'Moth Orchid',
     latin_name: 'Phalaenopsis',
     remote_photo_url:      orchid,
-    water_freq:  6,
+    water_freq:  3,
 )
 
 puts 'Creating users...'
@@ -137,7 +137,28 @@ grace = UserPlant.create!(
   nickname: 'Grace',
   last_watered: DateTime.current - 5,
   plant: weeping_fig,
-  user: sarah
+  user: chris
+)
+
+dawny = UserPlant.create!(
+  nickname: 'Dawny',
+  last_watered: DateTime.current - 4,
+  plant: peace_lily,
+  user: chris
+)
+
+benjie = UserPlant.create!(
+  nickname: 'Benjie',
+  last_watered: DateTime.current - 3,
+  plant: aloe_vera,
+  user: chris
+)
+
+jimmy_planty = UserPlant.create!(
+    nickname: 'Jimmie',
+    last_watered: DateTime.current - 2,
+    plant: spider_plant,
+    user: chris
 )
 
 puts 'Finished!'

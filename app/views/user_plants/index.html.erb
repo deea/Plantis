@@ -8,19 +8,23 @@
   <div class="seed-status-container">
     <%= render './shared/user-avatar' %>
     <div class="seed-status-text">
-        <%= link_to user_path(current_user) do %>
-          <p> <%= current_user.firstname %></p>
-          <h5>1,785 seeds!</h5>
-        <% end %>
+      <%= link_to user_path(current_user) do %>
+        <p> <%= current_user.firstname %></p>
+        <h5><%= current_user.seeds %> seeds!</h5>
+      <% end %>
     </div>
     <div class="btn-add-container">
-      <button type="button" class="btn btn-primary">Add Plant</button>
+      <%= link_to "Add Plant", new_user_plant_path, class: "btn btn-primary" %>
     </div>
   </div>
   <div class="jungle-card-container">
-    <%= render './shared/user-plant-card' %>
-    <%= render './shared/user-plant-card' %>
-    <%= render './shared/user-plant-card' %>
-    <%= render './shared/user-plant-card' %>
+    <% @user_plants.each do |plant| %>
+      <%= render 'shared/user-plant-card', plant: plant  %>
+      <% if plant.needs_water? %>
+        <%= render './shared/modal-water', plant: plant %>
+      <% else %>
+        <%= render './shared/modal-info', plant: plant %>
+      <% end %>
+    <% end %>
   </div>
 </div>
