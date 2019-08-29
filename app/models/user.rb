@@ -6,24 +6,18 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   has_many :user_plants
 
-  # def user_level(number_of_seeds)
-  #   if number_of_seeds >= 100
-  #     self.level = 1
-  #   elsif number_of_seeds >= 300
-  #     self.level = 2
-  #   elsif number_of_seeds >= 600
-  #     self.level = 3
-  #   elsif number_of_seeds >= 1000
-  #     self.level = 4
-  #   elsif number_of_seeds >= 1500
-  #     self.level = 5
-  #   else
-  #     self.level = 0
-  #   end
-  #   level.save
-  # end
+  def add_seeds
+    self.level = 0 if self.seeds <= 100
+    self.level = 1 if self.seeds <= 300
+    self.level = 2 if self.seeds <= 600
+    self.level = 3 if self.seeds <= 1000
+    self.level = 4 if self.seeds <= 1500
+    self.level = 5 if self.seeds > 1500
+    self.save
+  end
 
-  # def addseeds
-  #   seeds_earned += number_of_seeds
-  # end
+  def earn_seeds(points)
+    self.seeds += points
+    add_seeds
+  end
 end
