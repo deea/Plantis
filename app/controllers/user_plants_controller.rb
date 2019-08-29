@@ -3,6 +3,7 @@ class UserPlantsController < ApplicationController
 
   def index
     @user_plants = policy_scope(UserPlant).order(created_at: :desc)
+    @users = User.where.not(id: current_user.id)
   end
 
   def show
@@ -17,7 +18,7 @@ class UserPlantsController < ApplicationController
       else
         redirect_to plants_path
       end
-      
+
     authorize @user_plant
   end
 
