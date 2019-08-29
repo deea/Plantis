@@ -10,11 +10,14 @@ class UserPlantsController < ApplicationController
 
   def new
     @user_plant = UserPlant.new(user: current_user)
-    if params[:plant_id]
-      @plant = Plant.find(params[:plant_id])
-    else
-      redirect_to plants_path
-    end
+      if params[:user_plant] && params[:user_plants][:plant_id]
+        @plant = Plant.find(params[:user_plant][:plant_id])
+      elsif params[:plant_id]
+        @plant = Plant.find(params[:plant_id])
+      else
+        redirect_to plants_path
+      end
+      
     authorize @user_plant
   end
 
