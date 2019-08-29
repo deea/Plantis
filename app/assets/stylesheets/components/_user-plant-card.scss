@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-.card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-<<<<<<<< HEAD:app/assets/stylesheets/components/_user-plant-card.scss
-  min-width: 260px;
-  max-width: 260px;
-  margin: 30px;
-  border-radius: 15px;
-========
-  display: flex;
-  align-items: center;
->>>>>>>> master:app/assets/stylesheets/components/_plant-card.scss
-}
-
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-}
-
-.card-product h2 {
-=======
 .card-plant {
   overflow: hidden;
   background: white;
@@ -30,62 +5,21 @@
   min-width: 260px;
   max-width: 260px;
   margin: 30px;
-  border-radius: 1%;
+  border-radius: 15px;
 }
 
 .card-plant > img {
-  height: 200px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
 .card-plant h2 {
->>>>>>> master
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-<<<<<<< HEAD
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-  color: #141414;
-}
-
-#plant-name {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#plant-latin-name {
-  font-style: italic;
-}
-
-<<<<<<<< HEAD:app/assets/stylesheets/components/_user-plant-card.scss
-.water-logo {
-    position: absolute;
-    right: 11px;
-    bottom: 235px;
-    width: 40px;
-    font-size: 32px;
-========
-.card-product:hover {
-  background-color: #D0E1DA;
->>>>>>>> master:app/assets/stylesheets/components/_plant-card.scss
-}
-
-.card-link {
-  color: $primary_text;
-
-=======
 .card-plant p {
   font-size: 12px;
   opacity: .7;
@@ -104,8 +38,12 @@
 .water-logo {
     position: absolute;
     right: 11px;
-    bottom: 251px;
+    bottom: 235px;
     width: 40px;
     font-size: 32px;
->>>>>>> master
 }
+
+.card-link {
+  color: $primary_text;
+}
+
