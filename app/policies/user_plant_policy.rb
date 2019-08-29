@@ -12,4 +12,8 @@ class UserPlantPolicy < ApplicationPolicy
   def water_plant?
     record.user == user
   end
+
+  def create?
+    true
+  end
 end

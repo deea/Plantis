@@ -23,11 +23,17 @@ class UserPlantsController < ApplicationController
     @user_plant.user = current_user
     authorize @user_plant
     if @user_plant.save
-      redirect_to my_jungle_path
+      redirect_to plants_path
     else
       render :new
     end
   end
+
+  # def water_plants
+  #   @user_plant
+  #   current_user.addseeds
+  #   redirect_to
+  # end
 
   def my_jungle
     @user_plants = current_user.user_plants

@@ -1,0 +1,11 @@
+  <% @plants.each do |plant| %>
+    <%= link_to new_user_plant_path(plant_id: plant.id) do %>
+      <div class="card-product">
+        <%= cl_image_tag ( plant.photo ) %>
+        <div class="card-product-infos">
+          <p id="plant-name"><%= plant.name %></p>
+          <p id="plant-latin-name"><%= plant.latin_name %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>

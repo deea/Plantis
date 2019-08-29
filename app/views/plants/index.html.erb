@@ -1,12 +1,19 @@
-<h1>Add a new plant to your jungle</h1>
-<h3>
-  Select the type of plant you would like to add
-</h3>
+<div class="banner-plants">
+  <div class="plants-header">
+    <h1>
+      Add a plant to your jungle
+    </h1>
+    <h3>
+      Select the type of plant you would like to add
+    </h3>
+    <% if current_user.user_plants.any? %>
+      <%= link_to "Visit jungle", user_plants_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
 
-<ul>
-  <% @plants.each do |plant| %>
-  <li>
-  <%= link_to plant.name, new_user_plant_path(plant_id: plant.id) %>
-  </li>
-  <% end %>
-</ul>
+<div class="plant-container">
+  <div class="cards">
+    <%= render './shared/plant-card' %>
+  </div>
+</div>

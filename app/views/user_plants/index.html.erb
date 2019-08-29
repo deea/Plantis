@@ -8,8 +8,10 @@
   <div class="seed-status-container">
     <%= render './shared/user-avatar' %>
     <div class="seed-status-text">
-      <p> <%= current_user.firstname %></p>
-      <h5><%= current_user.seeds %> seeds!</h5>
+      <%= link_to user_path(current_user) do %>
+        <p> <%= current_user.firstname %></p>
+        <h5><%= current_user.seeds %> seeds!</h5>
+      <% end %>
     </div>
     <div class="btn-add-container">
       <%= link_to "Add Plant", new_user_plant_path, class: "btn btn-primary" %>
@@ -27,13 +29,3 @@
     <% end %>
   </div>
 </div>
-
-
-
-<!-- <div id="modal-show" class="popup">
-  <div class="popup_content">
-    <p>Some content</p>
-  </div>
-  <a href="/plants" class="popup_close popup-booking">X</a>
-  </div>
-</div> -->

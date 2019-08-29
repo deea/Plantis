@@ -1,17 +1,27 @@
-<h1>Add a new plant to your jungle</h1>
-<h3>
-  Let us know a little more about your <%= @plant.name %>
-</h3>
+<div class="banner-plants">
+  <div class="plants-header">
+    <h1>
+      Add a plant to your jungle
+    </h1>
+    <h3>
+      Tell us more about your <%= @plant.name %>
+    </h3>
+  </div>
+</div>
 
-
-
-<div class="form">
-<%= simple_form_for @user_plant do |f| %>
-  <%= f.input :nickname  %>
-  <%= f.input :last_watered, as: :string %>
-  <%= f.input :plant_id, as: "hidden", input_html: { value: @plant.id } %>
-  <%= f.input :photo, class: "insert-photo" %>
-  <%= f.input :photo_cache, as: "hidden" %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<%end %>
+<div class="plant-container">
+  <div class="form">
+    <%= simple_form_for @user_plant do |f| %>
+      <div class="form-inputs">
+        <%= f.input :nickname  %>
+        <%= f.input :last_watered, as: :string %>
+        <%= f.input :plant_id, as: "hidden", input_html: { value: @plant.id } %>
+        <%= f.input :photo, class: "insert-photo" %>
+        <%= f.input :photo_cache, as: "hidden" %>
+        <div class="form-actions">
+          <%= f.button :submit, "Add a plant" %>
+        </div>
+      </div>
+    <%end %>
+  </div>
 </div>

@@ -2,13 +2,13 @@
 
 body {
   padding-top: 45px;
-  transform: translate (-50%, -50%);
+  // transform: translate (-50%, -50%);
   opacity: 0.9;
 }
 
 .banner {
   width: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("masthead.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("banner.png");
   height: 600px;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,6 +16,7 @@ body {
   position: relative;
   color: white;
   text-align: center;
+  text-shadow: 1px 1px 4px rgb(100,100,100);
 }
 
 .header {
@@ -27,29 +28,61 @@ body {
   text-align: center;
 }
 
-.steps {
-  padding: 10px 15px;
-  display: flex;
+
+#card-img {
+  width: 75%;
+}
+
+// .card:hover {
+//   width: 27%;
+//   font-size: 18px;
+//   transition: 0.4s;
+//     h4{
+//       font-size: 28px;
+//       transition: 0.4s;
+//     }
+// }
+
+
+.cards {
+  margin: 30px;
+  // display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
-#step-img {
-  width: 75%;
+.card {
+  width: 100%;
   box-shadow: 2px 2px 4px rgb(200,200,200);
   border-radius: 5px;
+  padding-top: 20px;
+  height: 400px;
+  position: relative;
+  // justify-content: space-around;
 }
 
-.step:hover {
-  width: 27%;
-  font-size: 18px;
+.card p {
+  position: absolute;
+  bottom: 40px;
+}
+
+.card:hover{
+  filter: brightness(80%);
   transition: 0.4s;
-    h4{
-      font-size: 28px;
-      transition: 0.4s;
-    }
 }
 
-.step {
-  width: 25%;
+#request {
+  background-image: url("request.png");
+  background-size: contain;
+}
+
+#browse {
+  background-image: url("browse.png");
+  background-size: contain;
+
+}
+
+#delivery {
+  background-image: url("delivery.png");
+  background-size: contain;
+
 }

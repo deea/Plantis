@@ -3,6 +3,7 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css"
 
 flatpickr("#user_plant_last_watered", {
-  dateFormat: "D/M/Y",
+  dateFormat: "d/m/Y",
   maxDate: "today"
 })
+

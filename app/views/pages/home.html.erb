@@ -3,29 +3,37 @@
     <div class="banner">
       <div class="header">
         <h1>Extend the life of your plants while earning rewards</h1>
+        <% if user_signed_in? && current_user.user_plants.count > 0 %>
+          <%= link_to 'Visit your jungle', user_plants_path, class: 'btn btn-primary' %>
+          <%= link_to 'Add to your jungle', plants_path, class: 'btn btn-primary' %>
+        <% elsif user_signed_in? && current_user.user_plants.count == 0 %>
+          <%= link_to 'Start your jungle', plants_path, class: 'btn btn-primary' %>
+        <% else %>
+          <%= link_to 'Start your jungle', new_user_registration_path, class: 'btn btn-primary' %>
+        <% end%>
       </div>
     </div>
     <div class="how-it-works">
       <h2>How it works</h2>
-        <div class="steps">
-          <div class="step">
+        <div class="cards">
+          <div class="card" id="request">
+            <img src="request.png" alt="">
             <h4>Create your Jungle</h4>
             <br>
-            <%= image_tag "request.png", alt: "img", id:"step-img" %>
             <br>
             <p>Sign up and start adding your plants to your personal jungle</p>
           </div>
-          <div class="step">
+          <div class="card" id="browse">
+            <img src="browse.png" alt="">
             <h4>Set goals</h4>
             <br>
-            <%= image_tag "browse.png", alt: "img", id:"step-img" %>
             <br>
             <p>Set goals and keep your plants alive by following your watering calendar</p>
           </div>
-          <div class="step">
+          <div class="card" id="delivery">
+            <img src="delivery.png" alt="">
             <h4>Earn rewards</h4>
             <br>
-            <%= image_tag "delivery.png", alt: "img", id:"step-img" %>
             <br>
             <p>Once your task completed, you'll earn seeds that could get you rewards</p>
           </div>
