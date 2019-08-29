@@ -8,13 +8,20 @@
         </button>
       </div>
       <div class="modal-photo">
-        <%= cl_image_tag plant.plant.photo %>
+        <% if plant.photo.present? %>
+          <%= cl_image_tag plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
+        <% else %>
+          <%= cl_image_tag plant.plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
+        <% end %>
       </div>
       <div class="modal-body">
         <h5>💧 It's time to water <%= plant.nickname %> 💧</h5>
       </div>
       <div class="modal-footer">
         <%= link_to "Click to Water!", water_plant_path(plant), method: :patch, class: "btn btn-primary modal-water-action"  %>
+      </div>
+      <div class="modal-upl-delete">
+        <p> <%= link_to "delete plant", user_plant_path(plant), method: :delete %> </p>
       </div>
     </div>
   </div>
