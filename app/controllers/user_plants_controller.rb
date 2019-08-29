@@ -1,5 +1,5 @@
 class UserPlantsController < ApplicationController
-  before_action :set_plant, only: [:show, :water_plant]
+  before_action :set_plant, only: [:show, :water_plant, :destroy]
 
   def index
     @user_plants = policy_scope(UserPlant).order(created_at: :desc)
@@ -17,7 +17,6 @@ class UserPlantsController < ApplicationController
       else
         redirect_to plants_path
       end
-      
     authorize @user_plant
   end
 
@@ -26,17 +25,17 @@ class UserPlantsController < ApplicationController
     @user_plant.user = current_user
     authorize @user_plant
     if @user_plant.save
-      redirect_to plants_path
+      redirect_to user_plants_path
     else
       render :new
     end
   end
 
-  # def water_plants
-  #   @user_plant
-  #   current_user.addseeds
-  #   redirect_to
-  # end
+  def destroy
+    authorize @user_plant
+    @user_plant.destroy
+    redirect_to user_plants_path
+  end
 
   def my_jungle
     @user_plants = current_user.user_plants

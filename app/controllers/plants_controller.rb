@@ -30,10 +30,6 @@ class PlantsController < ApplicationController
     end
   end
 
-  def destroy
-    @plant.destroy
-  end
-
   private
 
   def set_plant
