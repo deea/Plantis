@@ -10,10 +10,10 @@
     <div class="current-seeds">
         <h2>Seeds</h2>
         <div class="progress">
-          <div class="progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: <%=@user.seeds%>%" aria-valuenow="<%= @user.seeds %>" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: <%= @user.seeds %>" aria-valuenow="<%= @user.seeds %>" aria-valuemin="0" aria-valuemax="500"></div>
         </div>
 
-        <%= @user.seeds %>
+        <p><%= @user.seeds %> seeds</p>
     </div>
   </div>
 </div>
