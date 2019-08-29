@@ -1,10 +1,14 @@
-<% @user_plants.each do |plant| %>
+<% @user_plants.each do |user_plant| %>
   <div class="card-plant">
-    <%= cl_image_tag plant.photo, :width=>260, :height=>200, :gravity=>"auto", :crop=>"fill" %>
+    <% if user_plant.photo.present? %>
+      <%= cl_image_tag user_plant.photo, :width=>260, :height=>200, :gravity=>"auto", :crop=>"fill" %>
+    <% else %> 
+      <%= cl_image_tag user_plant.plant.photo, :width=>260, :height=>200, :gravity=>"auto", :crop=>"fill" %>
+    <% end %>
     <div class="card-trip-infos">
       <div>
-        <h2> <%= plant.nickname %></h2>
-        <p> Last watered: <%= plant.last_watered %></p>
+        <h2> <%= user_plant.nickname %></h2>
+        <p> Last watered: <%= user_plant.last_watered %></p>
       </div>
       <!-- this if statement needs to be update - if needs watered -->
       <% if [true, false].sample %>
