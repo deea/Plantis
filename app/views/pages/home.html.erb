@@ -1,6 +1,6 @@
 <body>
   <div class="main-container">
-    <div class="banner">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "banner.png" %>);">
       <div class="header">
         <h1>Extend the life of your plants while earning rewards</h1>
         <% if user_signed_in? && current_user.user_plants.count > 0 %>
@@ -16,22 +16,19 @@
     <div class="how-it-works">
       <h2>How it works</h2>
         <div class="cards">
-          <div class="card" id="request">
-            <img src="request.png" alt="">
+          <div class="card" style="background-image: url(<%= image_path "request.png" %> )">
             <h4>Create your Jungle</h4>
             <br>
             <br>
             <p>Sign up and start adding your plants to your personal jungle</p>
           </div>
-          <div class="card" id="browse">
-            <img src="browse.png" alt="">
+          <div class="card" style="background-image: url(<%= image_path "browse.png" %> )">
             <h4>Set goals</h4>
             <br>
             <br>
             <p>Set goals and keep your plants alive by following your watering calendar</p>
           </div>
-          <div class="card" id="delivery">
-            <img src="delivery.png" alt="">
+          <div class="card" style="background-image: url(<%= image_path "delivery.png" %> )">
             <h4>Earn rewards</h4>
             <br>
             <br>
