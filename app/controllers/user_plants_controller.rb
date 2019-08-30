@@ -46,6 +46,7 @@ class UserPlantsController < ApplicationController
     authorize @user_plant
     @user_plant.update(last_watered: Date.today)
     @user_plant.user.earn_seeds(20)
+    @user_plant.user.user_level
     redirect_to user_plants_path
   end
 
