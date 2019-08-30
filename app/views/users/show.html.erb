@@ -13,13 +13,46 @@
           <div class="progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: <%= @user.seeds %>" aria-valuenow="<%= @user.seeds %>" aria-valuemin="0" aria-valuemax="500"></div>
         </div>
 
-        <p><%= @user.seeds %> seeds</p>
+        <p><%= @user.seeds %> seed(s)</p>
     </div>
   </div>
 </div>
 <div class="calendar">
   <div></div>
 </div>
+<div class="w3-container">
+
+
+  <div class="w3-light-grey">
+    <div id="myBar" class="w3-container w3-green" style="height:24px;width:0%">
+    </div>
+  </div>
+
+  <p id="myP">You have <span id="demo"><%= @user.seeds %></span> seeds</p>
+
+  <button class="w3-button w3-light-grey" onclick="move();this.disabled='true'">Update Seeds</button>
+</div>
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 0;
+  var id = setInterval(frame, 50);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      document.getElementById("myP").className = "w3-text-green w3-animate-opacity";
+      document.getElementById("myP").innerHTML = "You're currently level <%= @user.level %>, with <%= @user.seeds %> seeds";
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      var num = width * 1 / 0.5;
+      num = num.toFixed(0)
+      document.getElementById("demo").innerHTML = num;
+    }
+  }
+}
+</script>
 <div class="rewards">
   <div class="level-1-reward">
   </div>
