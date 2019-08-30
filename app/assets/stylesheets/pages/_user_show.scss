@@ -1,3 +1,6 @@
+h2 {
+  text-align: center;
+}
 .banner-my-seeds {
   background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("seeds.jpeg");
   height: 700px;
@@ -31,4 +34,19 @@
   width: 500px;
   margin: auto;
 }
+.w3-container {
+  border-radius: 5px;
+  margin: auto;
+  width: 500px;
+  // align-self: center;
+  // justify-content: center;
+}
+.w3-green {
+  align-left: 0px;
+}
 
+.w3-light-grey {
+  border-radius: 5px;
+  margin: auto;
+
+}

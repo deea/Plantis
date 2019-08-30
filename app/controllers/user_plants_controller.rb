@@ -17,6 +17,7 @@ class UserPlantsController < ApplicationController
       else
         redirect_to plants_path
       end
+
     authorize @user_plant
   end
 
@@ -44,7 +45,7 @@ class UserPlantsController < ApplicationController
   def water_plant
     authorize @user_plant
     @user_plant.update(last_watered: Date.today)
-    @user_plant.user.update(seeds: @user_plant.user.seeds + 20)
+    @user_plant.user.earn_seeds(20)
     redirect_to user_plants_path
   end
 
