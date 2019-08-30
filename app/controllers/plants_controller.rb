@@ -1,4 +1,7 @@
 class PlantsController < ApplicationController
+  before_action :set_plant, only: [:show, :edit, :update]
+
+  
   def index
     @plants = policy_scope(Plant).order(created_at: :desc)
   end
