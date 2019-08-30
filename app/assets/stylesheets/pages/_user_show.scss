@@ -35,11 +35,18 @@ h2 {
   margin: auto;
 }
 .w3-container {
-  width: 500px;
   border-radius: 5px;
   margin: auto;
+  width: 500px;
+  // align-self: center;
+  // justify-content: center;
+}
+.w3-green {
+  align-left: 0px;
 }
 
-script {
+.w3-light-grey {
+  border-radius: 5px;
   margin: auto;
+
 }
