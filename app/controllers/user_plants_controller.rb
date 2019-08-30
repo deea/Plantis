@@ -1,5 +1,5 @@
 class UserPlantsController < ApplicationController
-  before_action :set_plant, only: [:show, :water_plant, :destroy]
+  before_action :set_plant, only: [:show, :water_plant, :water_anyway, :destroy]
 
   def index
     @user_plants = policy_scope(UserPlant).order(created_at: :desc)
@@ -45,6 +45,12 @@ class UserPlantsController < ApplicationController
     authorize @user_plant
     @user_plant.update(last_watered: Date.today)
     @user_plant.user.update(seeds: @user_plant.user.seeds + 20)
+    redirect_to user_plants_path
+  end
+
+  def water_anyway
+    authorize @user_plant
+    @user_plant.update(last_watered: Date.today)
     redirect_to user_plants_path
   end
 
