@@ -4,6 +4,7 @@ class PlantsController < ApplicationController
   
   def index
     @plants = policy_scope(Plant).order(created_at: :desc)
+    @plants = @plants.search_by_name_and_latin_name(params[:navsearch]) if params[:navsearch].present?
   end
 
   def show

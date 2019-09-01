@@ -32,6 +32,11 @@
   grid-gap: 16px;
 }
 
+.plants-content {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
