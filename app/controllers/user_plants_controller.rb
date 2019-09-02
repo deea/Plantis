@@ -4,7 +4,13 @@ class UserPlantsController < ApplicationController
   def index
     @user_plants = policy_scope(UserPlant).order(created_at: :desc)
     @users = User.where.not(id: current_user.id)
+    @user = current_user
+    if params[:user] 
+      @user_plants = User.find(params[:user]).user_plants
+      @user = User.find(params[:user])
+    end
     @activities = PublicActivity::Activity.where(owner_id: current_user.following_ids)
+
   end
 
   def show

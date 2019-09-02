@@ -109,6 +109,7 @@ jimmy_plant = UserPlant.create!(
     nickname: 'Jimmy',
     last_watered: DateTime.current - 2,
     plant: spider_plant,
+    remote_photo_url: u_spider_plant,
     user: henry
 )
 

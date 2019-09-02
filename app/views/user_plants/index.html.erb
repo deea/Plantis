@@ -6,12 +6,12 @@
 
 <div class="jungle-content">
   <div class="seed-status-container">
-    <%= render './shared/user-avatar' %>
+    <%= render './shared/user-avatar',user: @user %>
     <div class="seed-status-text">
-      <%= link_to user_path(current_user) do %>
-        <h6> <%= current_user.firstname %></h6>
-        <h6> <%= current_user.followers.size %> <%= "follower".pluralize(current_user.followers.size) %></h6>
-        <h6><%= current_user.seeds %> seeds!</h6>
+      <%= link_to user_path(@user) do %>
+        <h6> <%= @user.firstname %></h6>
+        <h6> <%= @user.followers.size %> <%= "follower".pluralize(@user.followers.size) %></h6>
+        <h6><%= @user.seeds %> seeds!</h6>
       <% end %>
     </div>
     <div class="btn-add-container">
