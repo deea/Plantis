@@ -99,11 +99,11 @@ puts 'Creating user plants...'
 
 # UserPlant seeds
 
-# u_spider_plant = 'https://visitshipshewana.org/wp-content/uploads/2018/11/Spider-Plant-300x300.jpg'
-# u_aloe_vera = 'https://www.batterseaflowerstation.co.uk/wp-content/uploads/2019/06/AloeVera.jpg'
-# u_peace_lily = 'https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1565298283/vendor/364/catalog/product/2/0/20170802084204_file_5982391cb4c4e.jpg'
-# u_orchid = 'https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1559420334/vendor/3745/catalog/product/2/0/20181226031646_file_5c239b5ee04c2.jpg'
-# u_fig = 'https://s3.amazonaws.com/YouGarden/Web/500x500/800114.jpg'
+u_spider_plant = 'https://visitshipshewana.org/wp-content/uploads/2018/11/Spider-Plant-300x300.jpg'
+u_aloe_vera = 'https://www.batterseaflowerstation.co.uk/wp-content/uploads/2019/06/AloeVera.jpg'
+u_peace_lily = 'https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1565298283/vendor/364/catalog/product/2/0/20170802084204_file_5982391cb4c4e.jpg'
+u_orchid = 'https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1559420334/vendor/3745/catalog/product/2/0/20181226031646_file_5c239b5ee04c2.jpg'
+u_fig = 'https://s3.amazonaws.com/YouGarden/Web/500x500/800114.jpg'
 
 jimmy_plant = UserPlant.create!(
     nickname: 'Jimmy',
@@ -116,6 +116,7 @@ benji = UserPlant.create!(
   nickname: 'Benji',
   last_watered: DateTime.current - 3,
   plant: aloe_vera,
+  remote_photo_url: u_aloe_vera,
   user: henry
 )
 
@@ -123,6 +124,7 @@ dawn = UserPlant.create!(
   nickname: 'Dawn',
   last_watered: DateTime.current - 4,
   plant: peace_lily,
+  remote_photo_url: u_peace_lily,
   user: sofie
 )
 
@@ -130,6 +132,7 @@ bea = UserPlant.create!(
   nickname: 'Bea',
   last_watered: DateTime.current - 4,
   plant: moth_orchid,
+  remote_photo_url: u_orchid,
   user: chris
 )
 
@@ -137,6 +140,7 @@ grace = UserPlant.create!(
   nickname: 'Grace',
   last_watered: DateTime.current - 5,
   plant: weeping_fig,
+  remote_photo_url: u_fig,
   user: chris
 )
 
@@ -144,6 +148,7 @@ dawny = UserPlant.create!(
   nickname: 'Dawny',
   last_watered: DateTime.current - 4,
   plant: peace_lily,
+  remote_photo_url: u_peace_lily,
   user: chris
 )
 
@@ -151,6 +156,7 @@ benjie = UserPlant.create!(
   nickname: 'Benjie',
   last_watered: DateTime.current - 3,
   plant: aloe_vera,
+  remote_photo_url: u_aloe_vera,
   user: chris
 )
 
@@ -158,6 +164,7 @@ jimmy_planty = UserPlant.create!(
     nickname: 'Jimmie',
     last_watered: DateTime.current - 2,
     plant: spider_plant,
+    remote_photo_url: u_spider_plant,
     user: chris
 )
 
