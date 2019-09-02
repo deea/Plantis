@@ -15,9 +15,16 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+  min-height: 100vh;
+  padding-top: 0;
+}
+
 .page-container {
   position: relative;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .content-wrap {
@@ -25,9 +32,11 @@
 }
 
 .footer-wrap {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 2.5rem;            /* Footer height */
 }
+
+
 
