@@ -15,4 +15,5 @@ Rails.application.routes.draw do
     end
   end
   post "like/:id", to: "likes#like", as: 'like'
+  patch "water-anyway/:id", to: "user_plants#water_anyway", as: :water_anyway
 end

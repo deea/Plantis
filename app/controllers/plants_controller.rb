@@ -1,6 +1,11 @@
 class PlantsController < ApplicationController
+  before_action :set_plant, only: [:show, :edit, :update]
+  
   def index
     @plants = policy_scope(Plant).order(created_at: :desc)
+    @plants = @plants.search_by_name_and_latin_name(params[:navsearch]) if params[:navsearch].present?
+
+    @user_plant = UserPlant.new(user: current_user)
   end
 
   def show
@@ -28,10 +33,6 @@ class PlantsController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def destroy
-    @plant.destroy
   end
 
   private

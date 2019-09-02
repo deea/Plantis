@@ -8,7 +8,7 @@ body {
 
 .banner {
   width: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("banner4.jpg");
+  // background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("banner4.jpg");
   height: 600px;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ body {
 
 
 .cards {
-  margin: 30px;
+  margin: 30px 0px;
   // display: flex;
   justify-content: space-around;
   align-items: center;
@@ -75,6 +75,7 @@ body {
   padding-top: 20px;
   height: 400px;
   position: relative;
+  background-size: contain;
   // justify-content: space-around;
 }
 
@@ -88,19 +89,19 @@ body {
   transition: 0.4s;
 }
 
-#request {
-  background-image: url("request.png");
-  background-size: contain;
-}
+// #request {
+//   background-image: url("request.png");
+//   background-size: contain;
+// }
 
-#browse {
-  background-image: url("browse.png");
-  background-size: contain;
+// #browse {
+//   background-image: url("browse.png");
+//   background-size: contain;
 
-}
+// }
 
-#delivery {
-  background-image: url("delivery.png");
-  background-size: contain;
+// #delivery {
+//   background-image: url("delivery.png");
+//   
 
-}
+// }

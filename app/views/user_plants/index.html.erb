@@ -1,4 +1,4 @@
-<div class="banner-my-jungle">
+<div class="banner-my-jungle" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "banner2.jpg" %>)">
   <div class="jungle-header">
     <h1>Your Jungle</h1>
   </div>
@@ -15,7 +15,7 @@
       <% end %>
     </div>
     <div class="btn-add-container">
-      <%= link_to "Add Plant", new_user_plant_path, class: "btn btn-primary" %>
+      <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
     </div>
   </div>
   <div class="jungle-plant-main-container">
