@@ -49,7 +49,6 @@
         </h4>
         <% @activities.order(created_at: :desc).each do |activity| %>
           <% next if activity.trackable.nil? %>
-          <div>
             <div>
               <% if activity.key == "user_plant.water_plant" %>
                 <%= activity.owner.firstname + " " + activity.owner.lastname %> watered <%= activity.trackable.nickname %>
@@ -62,9 +61,12 @@
               <% end %>
             </div>
             <div class="likes">
-                <i class="fas fa-heart"></i>
-                <%= activity.votes_for.size %>
-              <%= link_to "Like", like_path(activity), method: :post %>
+              <div class="activity-like" data-id=<%= activity.id %>>
+                <%= render "likes/like", activity:activity %>
+              </div>
+              <p>
+                <em><%= seconds_to_days(Time.now() - activity.created_at) %></em>
+              </p>
             </div>
           </div>
         <% end %>
