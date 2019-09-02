@@ -32,12 +32,16 @@
     </div>
   </div>
 </div>
-<div class="calendar-block">
-  <div id="calendar" data-events="<%= current_user.user_plants.create_calendar_details %>"></div>
-</div>
-<div class="rewards">
-  <div class="level-1-reward">
+<div class="content-block">
+  <div class="calendar-block">
+    <div id="calendar" data-events="<%= current_user.user_plants.create_calendar_details %>"></div>
   </div>
-  <div class="level-2-reward">
+  <div class="rewards-cards-container">
+    <div class="reward-card">
+      <%= render 'shared/reward-card' %>
+    </div>
+  <div>
+
+</div>
   </div>
 </div>
