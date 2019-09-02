@@ -20,6 +20,9 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'pundit'
 
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
