@@ -35,6 +35,8 @@ h2 {
   margin: auto;
   height: 25px;
   font-size: 18px;
+  position: relative;
+  overflow: visible !important;
 }
 .w3-container {
   border-radius: 5px;
@@ -45,6 +47,7 @@ h2 {
 }
 .w3-green {
   align-left: 0px;
+  border-radius: 5px;
 }
 
 .w3-light-grey {
@@ -52,6 +55,35 @@ h2 {
   margin: auto;
 
 }
+
+.progress-bar {
+  position: absolute;
+  height: 98%;
+  border-radius: 5px;
+}
+
+.level-line {
+  // align: center;
+  // width: 500px;
+  position: relative;
+  margin-top:-20px;
+  z-index: 1;
+  font-size:12px;
+}
+
+.label-txt {
+  float: left;
+  position: absolute;
+}
+
+.label-line {
+  float: right;
+  background: #000;
+  height:50px;
+  width:1px;
+  margin-left: 5px;
+}
+
 .calendar-block {
   width: 50%;
   margin-top: 24px;

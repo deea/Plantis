@@ -9,11 +9,26 @@
     </div>
     <div class="current-seeds">
         <h2>Seeds</h2>
-        <div progress>
+        <br>
           <div class="progress">
+            <div class="level-line" style="left: 6.6%">
+              <div class="label-txt">Lvl1</div>
+              <div class="label-line"></div>
+            </div>
+            <div class="level-line" style="left: 20%">
+              <div class="label-txt">Lvl2</div>
+              <div class="label-line"></div>
+            </div>
+            <div class="level-line" style="left: 40%">
+              <div class="label-txt">Lvl3</div>
+              <div class="label-line"></div>
+            </div>
+            <div class="level-line" style="left: 66.6%">
+              <div class="label-txt">Lvl4</div>
+              <div class="label-line"></div>
+            </div>
             <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: <%= @user.seeds * 100 / 1500 %>%" aria-valuenow="<%= @user.seeds %>" aria-valuemin="0" aria-valuemax="1500"><%= @user.seeds %></div>
           </div>
-        </div>
     </div>
   </div>
 </div>
