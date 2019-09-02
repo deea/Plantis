@@ -18,6 +18,7 @@ class UsersController < ApplicationController
         format.js
       end
     end
+    authorize current_user
   end
 
   def unfollow
@@ -27,6 +28,7 @@ class UsersController < ApplicationController
         format.js { render action: :follow }
       end
     end
+    authorize current_user
   end
 
   private

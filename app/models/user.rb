@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   has_many :following_relationships, foreign_key: :follower_id, class_name: 'Follow'
   has_many :following, through: :following_relationships, source: :following
+  acts_as_voter
   # def user_level(number_of_seeds)
   #   if number_of_seeds >= 100
   #     self.level = 1
@@ -31,15 +32,20 @@ class User < ApplicationRecord
   #   seeds_earned += number_of_seeds
   # end
   def follow(user_id)
-    following_relationships.create(following_id: user_id)
+    follow = following_relationships.find_by(following_id: user_id)
+    if follow.present?
+      follow.update(active: true)
+    else
+      following_relationships.create(following_id: user_id)
+    end
   end
 
   def unfollow(user_id)
-    following_relationships.find_by(following_id: user_id).destroy
+    following_relationships.find_by(following_id: user_id).update(active: false)
   end
 
   def is_following?(user_id)
     relationship = Follow.find_by(follower_id: id, following_id: user_id)
-    return true if relationship
+    return true if relationship&.active
   end
 end

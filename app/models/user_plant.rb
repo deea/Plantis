@@ -2,6 +2,8 @@ class UserPlant < ApplicationRecord
   belongs_to :plant
   belongs_to :user
   mount_uploader :photo, PhotoUploader
+  include PublicActivity::Model
+  tracked owner: Proc.new{ |controller, model| model.user }
 
   def needs_water?
   (Date.today - last_watered) >= self.plant.water_freq

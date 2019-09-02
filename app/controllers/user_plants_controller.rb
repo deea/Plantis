@@ -4,6 +4,7 @@ class UserPlantsController < ApplicationController
   def index
     @user_plants = policy_scope(UserPlant).order(created_at: :desc)
     @users = User.where.not(id: current_user.id)
+    @activities = PublicActivity::Activity.where(owner_id: current_user.following_ids)
   end
 
   def show
@@ -47,6 +48,7 @@ class UserPlantsController < ApplicationController
     authorize @user_plant
     @user_plant.update(last_watered: Date.today)
     @user_plant.user.update(seeds: @user_plant.user.seeds + 20)
+    @user_plant.create_activity key: 'user_plant.water_plant', owner: current_user
     redirect_to user_plants_path
   end
 
