@@ -5,6 +5,26 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   mount_uploader :photo, PhotoUploader
   has_many :user_plants
+  has_many :follower_relationships, foreign_key: :following_id, class_name: 'Follow'
+  has_many :followers, through: :follower_relationships, source: :follower
+  acts_as_voter
+ 
+  def follow(user_id)
+    follow = following_relationships.find_by(following_id: user_id)
+    if follow.present?
+      follow.update(active: true)
+    else
+      following_relationships.create(following_id: user_id)
+    end
+  end
+
+  def unfollow(user_id)
+    following_relationships.find_by(following_id: user_id).update(active: false)
+  end
+
+  def is_following?(user_id)
+    relationship = Follow.find_by(follower_id: id, following_id: user_id)
+    return true if relationship&.active
 
   def user_level
     self.level = 5 if self.seeds > 1500

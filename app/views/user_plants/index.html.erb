@@ -9,22 +9,66 @@
     <%= render './shared/user-avatar' %>
     <div class="seed-status-text">
       <%= link_to user_path(current_user) do %>
-        <p> <%= current_user.firstname %></p>
-        <h5><%= current_user.seeds %> seeds!</h5>
+        <h6> <%= current_user.firstname %></h6>
+        <h6> <%= current_user.followers.size %> <%= "follower".pluralize(current_user.followers.size) %></h6>
+        <h6><%= current_user.seeds %> seeds!</h6>
       <% end %>
     </div>
     <div class="btn-add-container">
       <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
     </div>
   </div>
-  <div class="jungle-card-container">
-    <% @user_plants.each do |plant| %>
-      <%= render 'shared/user-plant-card', plant: plant  %>
-      <% if plant.needs_water? %>
-        <%= render './shared/modal-water', plant: plant %>
-      <% else %>
-        <%= render './shared/modal-info', plant: plant %>
-      <% end %>
-    <% end %>
+  <div class="jungle-plant-main-container">
+    <div class="jungle-plant-main-container-sub">
+      <div>
+        <h4>
+          Plants
+        </h4>
+      </div>
+      <div class="jungle-card-container">
+        <% @user_plants.each do |plant| %>
+          <%= render 'shared/user-plant-card', plant: plant  %>
+          <% if plant.needs_water? %>
+            <%= render './shared/modal-water', plant: plant %>
+          <% else %>
+            <%= render './shared/modal-info', plant: plant %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="social">
+      <div class="users">
+        <h4>
+          Users
+        </h4>
+        <%= render @users %>
+      </div>
+      <div class="following-activity">
+        <h4>
+          Activities
+        </h4>
+        <% @activities.order(created_at: :desc).each do |activity| %>
+          <% next if activity.trackable.nil? %>
+          <div>
+            <div>
+              <% if activity.key == "user_plant.water_plant" %>
+                <%= activity.owner.firstname + " " + activity.owner.lastname %> watered <%= activity.trackable.nickname %>
+              <% elsif activity.key == "user_plant.create" %>
+                <%= activity.owner.firstname + " " + activity.owner.lastname %> added a <%= activity.trackable.plant.name %> named <%= activity.trackable.nickname %>
+              <% elsif activity.key == "follow.create" %>
+                <%= activity.owner.firstname + " " + activity.owner.lastname %> started following <%= activity.trackable.following.firstname + " " +  activity.trackable.following.lastname %>
+              <% else %>
+                <% next %>
+              <% end %>
+            </div>
+            <div class="likes">
+                <i class="fas fa-heart"></i>
+                <%= activity.votes_for.size %>
+              <%= link_to "Like", like_path(activity), method: :post %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

@@ -38,6 +38,7 @@
   margin: 25px 30px 25px 30px;
   align-items: center;
 }
+
 .seed-status-container .btn-add-container {
   margin-left: auto; /*new*/
 }
@@ -45,10 +46,33 @@
 .seed-status-text {
   margin-left: 20px;
   text-decoration: none;
-
 }
 
+a {
+  color: black;
+}
 
 .seed-status-text > p {
   margin-bottom: 0px;
+}
+
+
+.jungle-plant-main-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.jungle-plant-main-container-sub {
+  width: 80%;
+}
+
+.social {
+}
+
+.users {
+  margin-bottom: 50px;
+}
+
+.likes {
+  font-size: 12px;
 }

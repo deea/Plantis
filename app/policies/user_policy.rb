@@ -5,7 +5,19 @@ class UserPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    true
+  end
+
   def show?
+    true
+  end
+
+  def follow?
+    true
+  end
+
+  def unfollow?
     true
   end
 end
