@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :follower_relationships, foreign_key: :following_id, class_name: 'Follow'
   has_many :followers, through: :follower_relationships, source: :follower
   acts_as_voter
- 
+
   def follow(user_id)
     follow = following_relationships.find_by(following_id: user_id)
     if follow.present?
@@ -25,6 +25,7 @@ class User < ApplicationRecord
   def is_following?(user_id)
     relationship = Follow.find_by(follower_id: id, following_id: user_id)
     return true if relationship&.active
+  end
 
   def user_level
     self.level = 5 if self.seeds > 1500
