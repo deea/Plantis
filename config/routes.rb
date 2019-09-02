@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get 'user_plants/show'
   get 'users/show'
   devise_for :users
+  namespace :user do
+    root :to => "user_plants#index"
+  end
   root to: 'pages#home'
   resources :plants
   resources :user_plants
