@@ -19,6 +19,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'pundit'
+gem 'public_activity'
+gem 'acts_as_votable'
 
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'

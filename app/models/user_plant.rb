@@ -2,6 +2,8 @@ class UserPlant < ApplicationRecord
   belongs_to :plant
   belongs_to :user
   mount_uploader :photo, PhotoUploader
+  include PublicActivity::Model
+  tracked owner: Proc.new{ |controller, model| model.user }
   validates :last_watered, :nickname, :photo, presence: true
 
   def needs_water?

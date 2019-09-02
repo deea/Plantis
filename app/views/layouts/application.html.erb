@@ -30,11 +30,17 @@
 
   </head>
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <div class="page-container">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+      <div class="content-wrap">
+        <%= yield %>
+      </div>
+      <div class="footer-wrap">
+        <%= render 'shared/footer' %>
+      </div>
+    </div>
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_pack_tag 'application' %>
   </body>
 </html>
