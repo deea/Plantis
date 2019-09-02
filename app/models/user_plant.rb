@@ -2,9 +2,10 @@ class UserPlant < ApplicationRecord
   belongs_to :plant
   belongs_to :user
   mount_uploader :photo, PhotoUploader
+  validates :last_watered, :nickname, :photo, presence: true
 
   def needs_water?
-  (Date.today - last_watered) >= self.plant.water_freq
+    (Date.today - last_watered) >= self.plant.water_freq
   end
 
   def days_until_water
