@@ -1,8 +1,12 @@
-<li data-user=<%= user.id %>>
+<div data-user=<%= user.id %>>
   <%= user.email %>
   <% if current_user.is_following?(user.id) %>
-    <%= link_to "Unfollow", unfollow_user_path(user.id), method: :post, remote: true %>
+    <%= link_to unfollow_user_path(user.id), method: :post, remote: true do %>
+      <i class="fas fa-user-minus"></i>
+    <% end %>
   <% else %>
-    <%= link_to "Follow", follow_user_path(user.id), method: :post, remote: true %>
+    <%= link_to follow_user_path(user.id), method: :post, remote: true do %>
+      <i class="fas fa-user-plus"></i>
+    <% end %>
   <% end %>
-</li>
+</div>
