@@ -22,6 +22,9 @@ gem 'pundit'
 gem 'public_activity'
 gem 'acts_as_votable'
 
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

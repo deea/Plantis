@@ -3,7 +3,7 @@ h2 {
 }
 .banner-my-seeds {
   background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("seeds.jpeg");
-  height: 700px;
+  height: 625px;
   background-position: center;
   background-size: cover;
 }
@@ -50,5 +50,32 @@ h2 {
 .w3-light-grey {
   border-radius: 5px;
   margin: auto;
+
+}
+.calendar-block {
+  width: 50%;
+  margin-top: 24px;
+  height: 650px;
+
+}
+#calendar {
+  margin: auto;
+  width: 500px;
+  height: 400px;
+    button {
+      background-color: rgb(220,220,220);
+      background-image: none;
+      border: 1px rgb(200,200,200);
+    }
+
+    button:hover {
+      background-color: rgb(180,180,180);
+      transition: 0.3s;
+    }
+
+    .fc-day:hover {
+      background-color: rgb(200,200,200);
+      transition: 0.3s;
+    }
 
 }

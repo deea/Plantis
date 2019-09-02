@@ -18,4 +18,10 @@ class UserPlant < ApplicationRecord
   def days_since_water
     @days = (Date.today - last_watered).to_i
   end
+
+  def self.create_calendar_details
+    all.map do |plant|
+      [plant.nickname, plant.days_until_water.days.from_now.strftime('%F')]
+    end
+  end
 end
