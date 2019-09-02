@@ -10,5 +10,15 @@ flatpickr("#user_plant_last_watered", {
   // Allow input for html5 form validation
   allowInput: true
 });
-
-$('#calendar').fullCalendar({ });
+const calendar = document.querySelector('#calendar')
+if (calendar) {
+  const events = JSON.parse(calendar.dataset.events)
+  $('#calendar').fullCalendar({
+    events: events.map((item) => {
+      return {
+        title: `Water ${item[0]}`,
+        start: item[1]
+      }
+    })
+  });
+}
