@@ -103,13 +103,20 @@ h2 {
   height: 400px;
 
     button {
-      background-color: rgb(220,220,220);
+      background-color: #56884C;
       background-image: none;
       border: 1px rgb(200,200,200);
+      color: white;
+
+      span {
+        color: white;
+      }
+
     }
 
     button:hover {
-      background-color: rgb(180,180,180);
+      background-color: #56884C;
+      opacity: 0.8;
       transition: 0.3s;
     }
 
@@ -152,9 +159,14 @@ h2 {
   }
 }
 
-#blocked {
-  filter: brightness(50%);
+#locked {
+  filter: brightness(50%) blur(1px);
   img {
     filter: blur(3px);
   }
+}
+
+.reward-card:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
 }
