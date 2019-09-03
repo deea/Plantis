@@ -11,6 +11,12 @@ class User < ApplicationRecord
   has_many :following_relationships, foreign_key: :follower_id, class_name: 'Follow'
   has_many :following, through: :following_relationships, source: :following
   acts_as_voter
+  include PgSearch::Model
+  pg_search_scope :search_by_firstname_and_lastname_and_email,
+                  against: [:firstname, :lastname, :email],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 
   def follow(user_id)
     follow = following_relationships.find_by(following_id: user_id)
