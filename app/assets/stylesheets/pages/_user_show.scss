@@ -17,7 +17,8 @@ h2 {
 
 .avatar-profile {
   border-radius: 50%;
-  border: 2px solid rgb(220,220,220)
+  border: 2px solid rgb(220,220,220);
+  box-shadow: 1px 1px 5px rgb(30,30,30)
 }
 
 .level {
@@ -35,6 +36,8 @@ h2 {
   margin: auto;
   height: 25px;
   font-size: 18px;
+  position: relative;
+  overflow: visible !important;
 }
 .w3-container {
   border-radius: 5px;
@@ -45,6 +48,7 @@ h2 {
 }
 .w3-green {
   align-left: 0px;
+  border-radius: 5px;
 }
 
 .w3-light-grey {
@@ -52,16 +56,53 @@ h2 {
   margin: auto;
 
 }
+
+.progress-bar {
+  position: absolute;
+  height: 98%;
+  border-radius: 5px;
+}
+
+.level-line {
+  // align: center;
+  // width: 500px;
+  position: relative;
+  margin-top:-20px;
+  z-index: 1;
+  font-size:12px;
+}
+
+.label-txt {
+  float: left;
+  position: absolute;
+}
+
+.label-line {
+  float: right;
+  background: #000;
+  height:50px;
+  width: 1px;
+  margin-left: -4px;
+  opacity: 0.3;
+}
+
+.content-block{
+  display: flex;
+}
 .calendar-block {
+  text-align: center;
+  padding-top: 30px;
   width: 50%;
   margin-top: 24px;
   height: 650px;
+  margin-right: 10px;
 
 }
 #calendar {
   margin: auto;
   width: 500px;
   height: 400px;
+
     button {
       background-color: rgb(220,220,220);
       background-image: none;
@@ -77,5 +118,33 @@ h2 {
       background-color: rgb(200,200,200);
       transition: 0.3s;
     }
+}
 
+.rewards-cards-container {
+  padding-top: 60px;
+  margin: auto;
+  display: grid;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.reward-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  min-width: 280px;
+  max-width: 280px;
+  height: 320px;
+  border-radius: 15px;
+  text-align: center;
+   img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    position: center;
+  }
+}
+
+#blocked {
+  filter: brightness(50%);
 }
