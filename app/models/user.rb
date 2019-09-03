@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :user_plants
   has_many :follower_relationships, foreign_key: :following_id, class_name: 'Follow'
   has_many :followers, through: :follower_relationships, source: :follower
-
+  before_save :user_level
   has_many :following_relationships, foreign_key: :follower_id, class_name: 'Follow'
   has_many :following, through: :following_relationships, source: :following
   acts_as_voter
@@ -37,7 +37,6 @@ class User < ApplicationRecord
     self.level = 2 if self.seeds < 600
     self.level = 1 if self.seeds < 300
     self.level = 0 if self.seeds < 100
-    self.save
   end
 
   def earn_seeds(points)

@@ -49,31 +49,31 @@
     <br>
     <div class="row">
       <div class="column">
-        <div class="reward-card" id="unlocked">
+        <div class="reward-card <%= @user.level >= 1 ? 'unlocked' : 'locked' %>">
           <%= render 'shared/reward-card' %>
         </div>
       </div>
       <div class="column">
-        <div class="reward-card" id="locked">
-          <%= render 'shared/reward-card' %>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
-        <div class="reward-card" id="locked">
-          <%= render 'shared/reward-card' %>
-        </div>
-      </div>
-      <div class="column">
-        <div class="reward-card" id="locked">
+        <div class="reward-card <%= @user.level >= 2 ? 'unlocked' : 'locked' %>">
           <%= render 'shared/reward-card' %>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="column">
-        <div class="reward-card" id="locked">
+        <div class="reward-card <%= @user.level >= 3 ? 'unlocked' : 'locked' %>">
+          <%= render 'shared/reward-card' %>
+        </div>
+      </div>
+      <div class="column">
+        <div class="reward-card <%= @user.level >= 4 ? 'unlocked' : 'locked' %>">
+          <%= render 'shared/reward-card' %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="reward-card <%= @user.level >= 5 ? 'unlocked' : 'locked' %>">
           <%= render 'shared/reward-card' %>
         </div>
       </div>
