@@ -43,14 +43,40 @@
     <div id="calendar" data-events="<%= current_user.user_plants.create_calendar_details %>"></div>
   </div>
   <div class="rewards-cards-container">
+    <br>
+    <br>
     <h3>Rewards</h3>
     <br>
-    <div class="reward-card">
-      <%= render 'shared/reward-card' %>
+    <div class="row">
+      <div class="column">
+        <div class="reward-card <%= @user.level >= 1 ? 'unlocked' : 'locked' %>">
+          <%= render 'shared/reward-card' %>
+        </div>
+      </div>
+      <div class="column">
+        <div class="reward-card <%= @user.level >= 2 ? 'unlocked' : 'locked' %>">
+          <%= render 'shared/reward-card' %>
+        </div>
+      </div>
     </div>
-    <br>
-    <div class="reward-card" id="blocked">
-      <%= render 'shared/reward-card' %>
+    <div class="row">
+      <div class="column">
+        <div class="reward-card <%= @user.level >= 3 ? 'unlocked' : 'locked' %>">
+          <%= render 'shared/reward-card' %>
+        </div>
+      </div>
+      <div class="column">
+        <div class="reward-card <%= @user.level >= 4 ? 'unlocked' : 'locked' %>">
+          <%= render 'shared/reward-card' %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="reward-card <%= @user.level >= 5 ? 'unlocked' : 'locked' %>">
+          <%= render 'shared/reward-card' %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

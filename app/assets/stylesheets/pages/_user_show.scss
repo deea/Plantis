@@ -96,7 +96,6 @@ h2 {
   margin-top: 24px;
   height: 650px;
   margin-right: 10px;
-
 }
 #calendar {
   margin: auto;
@@ -104,13 +103,20 @@ h2 {
   height: 400px;
 
     button {
-      background-color: rgb(220,220,220);
+      background-color: #56884C;
       background-image: none;
       border: 1px rgb(200,200,200);
+      color: white;
+
+      span {
+        color: white;
+      }
+
     }
 
     button:hover {
-      background-color: rgb(180,180,180);
+      background-color: #56884C;
+      opacity: 0.8;
       transition: 0.3s;
     }
 
@@ -121,30 +127,46 @@ h2 {
 }
 
 .rewards-cards-container {
-  padding-top: 60px;
+  // padding-top: 60px;
   margin: auto;
-  display: grid;
   justify-content: space-between;
   text-align: center;
+  display: grid;
+  width: 50%;
+}
+
+.column {
+  padding: 30px;
 }
 
 .reward-card {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  min-width: 280px;
-  max-width: 280px;
-  height: 320px;
+  min-width: 180px;
+  max-width: 180px;
+  height: 220px;
   border-radius: 15px;
   text-align: center;
-   img {
-    height: 220px;
+    h2 {
+      font-size: 20px;
+    }
+    img {
+    height: 150px;
     width: 100%;
     object-fit: cover;
     position: center;
   }
 }
 
-#blocked {
-  filter: brightness(50%);
+.locked {
+  filter: brightness(50%) blur(1px);
+  img {
+    filter: blur(3px);
+  }
+}
+
+.reward-card:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
 }
