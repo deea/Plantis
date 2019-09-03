@@ -21,7 +21,7 @@
         <%= link_to "Water Anyway?", water_anyway_path(plant), method: :patch, class: "btn btn-primary modal-water-action" %>
       </div>
       <div class="modal-upl-delete">
-        <p> <%= link_to "delete plant", user_plant_path(plant), method: :delete %> </p>
+        <p> <%= link_to "My plant has died", user_plant_path(plant), method: :delete, class: "btn btn-warning plant-died" %> </p>
       </div>
     </div>
   </div>
