@@ -1,0 +1,11 @@
+.user-cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
