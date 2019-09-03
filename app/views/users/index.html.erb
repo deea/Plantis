@@ -1,21 +1,20 @@
-    <br>
-<br>
-<br>
-<br>
-    <div class="search-form">
-    <form action="/users" method="get" class="form-inline my-2 my-lg-0">
-      <input name="navsearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-light my-2 my-sm-0 btn-primary" type="submit" ><i class="fas fa-search"></i></button>
-    </form>
+<div class="banner-plants" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url(<%= image_path "fernbanner.jpg" %>);">
+  <div class="plants-header">
+    <h1>
+      Find Your Friend's Jungle
+    </h1>
   </div>
+</div>
+<div class="search-form">
+  <form action="/users" method="get" class="form-inline my-2 my-lg-0">
+    <input name="navsearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-light my-2 my-sm-0 btn-primary" type="submit" ><i class="fas fa-search"></i></button>
+  </form>
+</div>
+<div class="test">
+</div>
+<div class="cards">
+  <%= render './shared/user-card' %>
+</div>
 
-
-<% @users.each do |user| %>
-
-
-<li>
-  <%= render './shared/user-avatar', user: user %> <%= user.firstname %> <%= user.lastname %>
-</li>
-
-<% end %>
 

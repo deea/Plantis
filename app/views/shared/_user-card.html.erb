@@ -1,0 +1,10 @@
+  <% @users.each do |user| %>
+    <div class="card-product">
+      <%= render './shared/user-avatar', user: user %>
+      <div class="card-product-infos">
+        <p class="user-name"><%= user.firstname %> <%= user.lastname %></p>
+        <p class="user-seeds"><%= user.seeds %> seeds</p>
+        <p> Level <%= user.level %></p>
+      </div>
+    </div>
+  <% end %>
