@@ -117,23 +117,28 @@ h2 {
 }
 
 .rewards-cards-container {
-  padding-top: 120px;
+  padding-top: 60px;
   margin: auto;
-
+  display: grid;
+  justify-content: space-between;
 }
 .reward-card {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  min-width: 260px;
-  max-width: 260px;
-  height: 300px;
+  min-width: 280px;
+  max-width: 280px;
+  height: 320px;
   border-radius: 15px;
   text-align: center;
+   img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    position: center;
+  }
 }
- img {
-  height: 220px;
-  width: 100%;
-  object-fit: cover;
-  position: center;
+
+#blocked {
+  filter: brightness(50%);
 }
