@@ -27,6 +27,10 @@
               <div class="label-txt">Lvl4</div>
               <div class="label-line"></div>
             </div>
+            <div class="level-line" style="left: 100%">
+              <div class="label-txt">Lvl5</div>
+              <div class="label-line"></div>
+            </div>
             <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: <%= @user.seeds * 100 / 1500 %>%" aria-valuenow="<%= @user.seeds %>" aria-valuemin="0" aria-valuemax="1500"><%= @user.seeds %></div>
           </div>
     </div>
@@ -34,9 +38,13 @@
 </div>
 <div class="content-block">
   <div class="calendar-block">
+    <h3>Upcoming Events</h3>
+    <br>
     <div id="calendar" data-events="<%= current_user.user_plants.create_calendar_details %>"></div>
   </div>
   <div class="rewards-cards-container">
+    <h3>Rewards</h3>
+    <br>
     <div class="reward-card">
       <%= render 'shared/reward-card' %>
     </div>

@@ -17,7 +17,8 @@ h2 {
 
 .avatar-profile {
   border-radius: 50%;
-  border: 2px solid rgb(220,220,220)
+  border: 2px solid rgb(220,220,220);
+  box-shadow: 1px 1px 5px rgb(30,30,30)
 }
 
 .level {
@@ -81,7 +82,7 @@ h2 {
   background: #000;
   height:50px;
   width: 1px;
-  margin-left: 5px;
+  margin-left: -4px;
   opacity: 0.3;
 }
 
@@ -89,6 +90,8 @@ h2 {
   display: flex;
 }
 .calendar-block {
+  text-align: center;
+  padding-top: 30px;
   width: 50%;
   margin-top: 24px;
   height: 650px;
@@ -99,6 +102,7 @@ h2 {
   margin: auto;
   width: 500px;
   height: 400px;
+
     button {
       background-color: rgb(220,220,220);
       background-image: none;
@@ -121,7 +125,9 @@ h2 {
   margin: auto;
   display: grid;
   justify-content: space-between;
+  text-align: center;
 }
+
 .reward-card {
   overflow: hidden;
   background: white;
