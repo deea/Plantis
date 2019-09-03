@@ -56,7 +56,7 @@ a {
 
 .jungle-plant-main-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .jungle-plant-main-container-sub {
@@ -64,6 +64,9 @@ a {
 }
 
 .social {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .users {
