@@ -1,6 +1,10 @@
 <div class="banner-my-jungle" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "banner2.jpg" %>)">
   <div class="jungle-header">
-    <h1>Your Jungle</h1>
+    <% if current_user == @user %>
+      <h1>Your Jungle</h1>
+    <% else %>
+      <h1><%= @user.firstname %>'s Jungle</h1>
+    <% end %>  
   </div>
 </div>
 
@@ -28,11 +32,14 @@
       <div class="jungle-card-container">
         <% @user_plants.each do |plant| %>
           <%= render 'shared/user-plant-card', plant: plant  %>
-          <% if plant.needs_water? %>
-            <%= render './shared/modal-water', plant: plant %>
-          <% else %>
-            <%= render './shared/modal-info', plant: plant %>
+          <% if current_user == @user %>
+            <% if plant.needs_water? %>
+              <%= render './shared/modal-water', plant: plant %>
+            <% else %>
+              <%= render './shared/modal-info', plant: plant %>
+            <% end %>
           <% end %>
+        
         <% end %>
       </div>
     </div>
