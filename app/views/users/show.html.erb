@@ -78,7 +78,9 @@
       <div class="discover">
         <h3>People you may know</h3>
         <div class="user-cards-container">
-          <%= render './shared/user-card' %>
+        <% @users.each do |user| %>
+          <%= render './shared/user-card', user: user %>
+        <% end %>    
         </div>
       </div>
     </div>
