@@ -59,7 +59,6 @@
         </h4>
         <%=  @users %>
       </div> -->
-  <div class="calendar-block">
 <!--     <h3>Upcoming Events</h3>
     <br>
     <div id="calendar" data-events="<%= current_user.user_plants.create_calendar_details %>"></div> -->
@@ -67,11 +66,11 @@
     <br>
     <br>
     <br> -->
+    <div class="this-week-container">
     <h3>This week</h3>
     <%= render "./shared/cal-card", plants: @user_plants%>
-  </div>
-  <div>
-  </div>
+
+    </div>
   <!-- <div class="rewards-cards-container">
       <div class="following-activity">
         <h4>
