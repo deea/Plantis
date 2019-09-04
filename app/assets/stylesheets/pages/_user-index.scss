@@ -1,7 +1,7 @@
 .user-cards-container {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .search-container {
