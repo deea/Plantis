@@ -9,6 +9,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    leaderboard
+    @activities = PublicActivity::Activity.where(owner_id: current_user.following_ids)
     authorize @user
   end
 
@@ -36,7 +38,7 @@ class UsersController < ApplicationController
 
   def leaderboard
     @users = User.all.sort_by do |user|
-      user.level
+      user.seeds
     end.reverse
     skip_authorization
   end

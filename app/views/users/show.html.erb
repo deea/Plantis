@@ -37,39 +37,48 @@
   </div>
 </div>
 <div class="content-block">
-
-    <br>
-    <br>
-    <h3>Rewards</h3>
-    <br>
-    <div class="row">
-      <div class="column">
-        <div class="reward-card <%= @user.level >= 1 ? 'unlocked' : 'locked' %>">
-          <%= render 'shared/reward-card' %>
-        </div>
-      </div>
-      <div class="column">
-        <div class="reward-card <%= @user.level >= 2 ? 'unlocked' : 'locked' %>">
-          <%= render 'shared/reward-card' %>
-        </div>
-      </div>
+  <div class="content-left">
+    <div class="leaderboard-header">
+      <h1>Leaderboard</h1>
     </div>
-    <div class="row">
-      <div class="column">
-        <div class="reward-card <%= @user.level >= 3 ? 'unlocked' : 'locked' %>">
-          <%= render 'shared/reward-card' %>
-        </div>
-      </div>
-      <div class="column">
-        <div class="reward-card <%= @user.level >= 4 ? 'unlocked' : 'locked' %>">
-          <%= render 'shared/reward-card' %>
-        </div>
-      </div>
+    <div class="leaderboard-content">
+      <% @users.first(10).each.with_index do |user, index| %>
+        <%= render 'shared/leaderboard-card', user: user, index: index %>
+      <% end %>
     </div>
-    <div class="row">
-      <div class="column">
-        <div class="reward-card <%= @user.level >= 5 ? 'unlocked' : 'locked' %>">
-          <%= render 'shared/reward-card' %>
+  </div>
+  <div class="content-right">
+    <div class="following-activity">
+      <h4>
+        Activities
+      </h4>
+      <% @activities.order(created_at: :desc).each do |activity| %>
+        <% next if activity.trackable.nil? %>
+          <div>
+            <% if activity.key == "user_plant.water_plant" %>
+              <%= activity.owner.firstname + " " + activity.owner.lastname %> watered <%= activity.trackable.nickname %>
+            <% elsif activity.key == "user_plant.create" %>
+              <%= activity.owner.firstname + " " + activity.owner.lastname %> added a <%= activity.trackable.plant.name %> named <%= activity.trackable.nickname %>
+            <% elsif activity.key == "follow.create" %>
+              <%= activity.owner.firstname + " " + activity.owner.lastname %> started following <%= activity.trackable.following.firstname + " " +  activity.trackable.following.lastname %>
+            <% else %>
+              <% next %>
+            <% end %>
+          </div>
+          <div class="likes">
+            <div class="activity-like" data-id=<%= activity.id %>>
+              <%= render "likes/like", activity:activity %>
+            </div>
+            <p>
+              <em><%= seconds_to_days(Time.now() - activity.created_at) %></em>
+            </p>
+          </div>
+      <% end %>
+      </div>
+      <div class="discover">
+        <h3>People you may know</h3>
+        <div class="user-cards-container">
+          <%= render './shared/user-card' %>
         </div>
       </div>
     </div>

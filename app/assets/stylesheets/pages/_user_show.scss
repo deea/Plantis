@@ -90,92 +90,13 @@ h2 {
 .content-block{
   display: flex;
 }
-.calendar-block {
-  text-align: center;
-  padding-top: 30px;
+
+.content-right {
   width: 50%;
-  margin-top: 24px;
-  height: 650px;
-  margin-right: 10px;
-}
-#calendar {
-  margin: auto;
-  width: 500px;
-  height: 400px;
 
-    button {
-      background-color: #56884C;
-      background-image: none;
-      border: 1px rgb(200,200,200);
-      color: white;
-
-      span {
-        color: white;
-      }
-
-    }
-
-    button:hover {
-      background-color: #56884C;
-      opacity: 0.8;
-      transition: 0.3s;
-    }
-
-    .fc-day:hover {
-      background-color: rgb(200,200,200);
-      transition: 0.3s;
-    }
 }
 
-.rewards-cards-container {
-  // padding-top: 60px;
-  margin: auto;
-  justify-content: space-between;
-  text-align: center;
-  // display: grid;
+.content-left {
   width: 50%;
-}
 
-.column {
-  margin: auto;
-  padding: 30px;
-}
-
-.row {
-  margin: auto;
-}
-
-.reward-card {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  min-width: 180px;
-  max-width: 180px;
-  height: 220px;
-  border-radius: 15px;
-  text-align: center;
-    h2 {
-      font-size: 20px;
-    }
-    img {
-    height: 150px;
-    width: 100%;
-    object-fit: cover;
-    position: center;
-  }
-}
-.locked {
-  filter: brightness(50%) blur(1px);
-  img {
-    filter: blur(3px);
-  }
-}
-
-// .locked:hover {
-//   background-image: url('./images/lock-solid.svg');
-// }
-
-.reward-card:hover {
-  transform: scale(1.05);
-  transition: 0.1s;
 }

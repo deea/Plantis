@@ -78,3 +78,42 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+.calendar-block {
+  text-align: center;
+  padding-top: 30px;
+  width: 50%;
+  margin-top: 24px;
+  height: 650px;
+  margin-right: 10px;
+}
+
+
+#calendar {
+  margin: auto;
+  width: 500px;
+  height: 400px;
+
+    button {
+      background-color: #56884C;
+      background-image: none;
+      border: 1px rgb(200,200,200);
+      color: white;
+
+      span {
+        color: white;
+      }
+
+    }
+
+    button:hover {
+      background-color: #56884C;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    .fc-day:hover {
+      background-color: rgb(200,200,200);
+      transition: 0.3s;
+    }
+}
