@@ -1,16 +1,18 @@
-.notification {
+.card-leader {
   display: flex;
   align-items: center;
   background: white;
   margin-bottom: 8px;
   padding: 8px 16px;
   border: 1px solid rgb(235,235,235);
-  max-width: 35%;
+  max-width: 80%;
   height: 120px;
   margin-left: 40px;
+  border-radius: 3px;
+
 }
 
-.notification .notification-content {
+.card-leader .card-leader-content {
   flex-grow: 1;
   padding: 0 24px;
 }
@@ -22,12 +24,12 @@
   align-items: center;
 }
 
-.notification h3 {
+.card-leader h3 {
   margin: 1px;
   line-height: 1.4;
 }
 
-.notification p {
+.card-leader p {
   margin: 0;
   line-height: 1.4;
 }
@@ -38,28 +40,9 @@
   color: $primary-color;
 }
 
-.notification .notification-actions {
-  opacity: 0;
-  display: flex;
-  transition: ease .3s;
-}
-
-.notification:hover .notification-actions {
-  opacity: 1;
-}
-
-.notification .notification-actions a {
-  color: #999999;
-  margin-left: 16px;
-  font-size: 14px;
-}
-
-.notification .notification-actions a:hover {
-  color: #555555;
-}
 .ranking {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   width: 25px;
   height: 25px;
   background: $primary-color;
