@@ -1,0 +1,21 @@
+<div class="notification">
+  <div class="avatar-parent">
+    <%= cl_image_tag ( user.photo ), :transformation=>[
+    {:width=>80, :height=>80, :gravity=>"face", :radius=>"max", :crop=>"fill"},
+    ], class: "avatar-large" %>
+    <div class="ranking">
+      <span class="avatar-rank"><%= (index + 1).ordinalize %></span>
+    </div>
+  </div>
+  <div class="notification-content">
+    <h3><small><%= user.firstname %> <%= user.lastname %></small></h3>
+    <div class="stats">
+      <p>Level <%= user.level %></p>
+      <p><%= user.seeds %><i id="logo-card" class="fas fa-seedling"></i></p>
+    </div>
+  </div>
+  <%# <div class="notification-actions">
+    <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
+    <a href="#">Delete <i class="far fa-trash-alt"></i></a>
+  </div> %>
+</div>

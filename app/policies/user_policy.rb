@@ -20,4 +20,9 @@ class UserPolicy < ApplicationPolicy
   def unfollow?
     true
   end
+  def leaderboard?
+    true
+  end
+
+
 end
