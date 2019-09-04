@@ -17,10 +17,12 @@
  overflow: hidden;
  height: 80px;
  background: white;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ // box-shadow: 0 0 15px rgba(0,0,0,0.2);
  display: flex;
  align-items: center;
  margin-left: 0px;
+ padding-bottom: 10px;
+
 }
 .cal-photo-container {
   height: 100%;
@@ -28,6 +30,7 @@
 .cal-photo {
   height: 80px;
   width: 80px;
+  border-radius: 3px;
 }
 .cal-nickname {
   flex-grow: 2;

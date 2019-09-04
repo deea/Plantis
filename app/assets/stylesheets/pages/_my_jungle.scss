@@ -57,10 +57,18 @@ a {
 .jungle-plant-main-container {
   display: flex;
   justify-content: space-between;
+
 }
 
 .jungle-plant-main-container-sub {
-  width: 80%;
+  // overflow: hidden;
+  // background: white;
+  // box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  // display: flex;
+  // margin-left: 0px;
+  // border-radius: 3px;
+  // padding: 15px;
+  width: 75%;
 }
 
 .social {
@@ -77,6 +85,23 @@ a {
   font-size: 12px;
   display: flex;
   justify-content: space-between;
+}
+
+.this-week-outer {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  display: flex;
+  margin-left: 0px;
+  border-radius: 3px;
+  padding: 15px;
+  margin-top: 60px;
+  min-width: 245px;
+}
+
+.week-border {
+  border-bottom: solid 1px;
+ border-color: #CFCECC;
 }
 
 .calendar-block {
