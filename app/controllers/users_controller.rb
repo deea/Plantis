@@ -14,12 +14,14 @@ class UsersController < ApplicationController
 
   def follow
     if current_user.follow(@user.id)
-      respond_to do |format|
-        format.html { redirect_to root_path }
-        format.js
-      end
+    #   respond_to do |format|
+    #     format.html { redirect_to root_path }
+    #     format.js
+    #   end
+    # end
+      redirect_to user_plants_path(current_user)
+      authorize current_user
     end
-    authorize current_user
   end
 
   def unfollow

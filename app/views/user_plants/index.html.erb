@@ -20,6 +20,9 @@
     </div>
     <div class="btn-add-container">
       <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
+      <% unless current_user == @user %>
+        <%= link_to "Follow", follow_user_path(@user), :method => :post, class: "btn btn-primary"  %>
+        <% end %>
     </div>
   </div>
   <div class="jungle-plant-main-container">
