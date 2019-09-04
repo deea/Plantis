@@ -78,15 +78,24 @@
       </div>
     </div>
     <div class="discover">
-        <h3>People you may know</h3>
-        <div class="user-cards-container">
-
-        <% @follow_users.each do |user| %>
+      <h3>Friends</h3>
+      <div class="user-cards-container">
+        <% @following_users.each do |user| %>
           <div data-user=<%= user.id %>>
             <%= render './shared/user-card', user: user %>
           </div>
         <% end %>
-        </div>
+      </div>
+    </div>
+    <div class="discover">
+      <h3>People you may know</h3>
+      <div class="user-cards-container">
+        <% @not_following_users.each do |user| %>
+          <div data-user=<%= user.id %>>
+            <%= render './shared/user-card', user: user %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

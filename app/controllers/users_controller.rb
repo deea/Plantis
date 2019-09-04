@@ -12,11 +12,19 @@ class UsersController < ApplicationController
     leaderboard
     @activities = PublicActivity::Activity.where(owner_id: current_user.following_ids)
     authorize @user
-    @follow_users = User.where.not(id: current_user.id) - current_user.following
+    @followings = current_user.following_relationships.where(active: true)
+    @following_users = []
+    @followings.each do |following|
+      @following_users << User.find(following.following_id)
+    end
+    @not_followings = current_user.following_relationships.where(active: false)
+    @not_following_users = []
+    @not_followings.each do |not_following|
+      @not_following_users << User.find(not_following.following_id)
+    end
   end
 
   def follow
-
     if current_user.follow(@user.id)
       respond_to do |format|
         format.html { redirect_to root_path }
