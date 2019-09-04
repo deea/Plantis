@@ -10,7 +10,7 @@
       <h2>Level : <%= @user.level %></h2>
     </div>
     <div class="current-seeds">
-        <h2>Seeds</h2>
+        <h2>Seeds: <%= @user.seeds %></h2>
         <br>
           <div class="progress">
             <div class="level-line" style="left: 6.6%">
@@ -33,7 +33,7 @@
               <div class="label-txt">Lvl5</div>
               <div class="label-line"></div>
             </div>
-            <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: <%= @user.seeds * 100 / 1500 %>%" aria-valuenow="<%= @user.seeds %>" aria-valuemin="0" aria-valuemax="1500"><%= @user.seeds %></div>
+            <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: <%= @user.seeds * 100 / 1500 %>%" aria-valuenow="<%= @user.seeds %>" aria-valuemin="0" aria-valuemax="1500"><% @user.seeds %></div>
           </div>
     </div>
   </div>
@@ -82,7 +82,7 @@
         <div class="user-cards-container">
         <% @users.each do |user| %>
           <%= render './shared/user-card', user: user %>
-        <% end %>    
+        <% end %>
         </div>
       </div>
     </div>
