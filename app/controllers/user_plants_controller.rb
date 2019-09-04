@@ -5,7 +5,7 @@ class UserPlantsController < ApplicationController
     @user_plants = policy_scope(UserPlant).order(created_at: :desc)
     @users = User.where.not(id: current_user.id)
     @user = current_user
-    if params[:user] 
+    if params[:user]
       @user_plants = User.find(params[:user]).user_plants
       @user = User.find(params[:user])
     end
@@ -51,9 +51,10 @@ class UserPlantsController < ApplicationController
   def water_plant
     authorize @user_plant
     @user_plant.update(last_watered: Date.today)
-    @user_plant.create_activity key: 'user_plant.water_plant', owner: current_user
+    @user_plant.create_activity(key: 'user_plant.water_plant', owner: current_user)
     @user_plant.user.earn_seeds(20)
     @user_plant.user.user_level
+    @user_plant.user.save
     redirect_to user_plants_path
   end
 
