@@ -38,6 +38,7 @@ h2 {
   font-size: 18px;
   position: relative;
   overflow: visible !important;
+  border-radius: 3px;
 }
 .w3-container {
   border-radius: 5px;
@@ -60,7 +61,7 @@ h2 {
 .progress-bar {
   position: absolute;
   height: 98%;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .level-line {
@@ -131,12 +132,17 @@ h2 {
   margin: auto;
   justify-content: space-between;
   text-align: center;
-  display: grid;
+  // display: grid;
   width: 50%;
 }
 
 .column {
+  margin: auto;
   padding: 30px;
+}
+
+.row {
+  margin: auto;
 }
 
 .reward-card {
@@ -158,13 +164,16 @@ h2 {
     position: center;
   }
 }
-
 .locked {
   filter: brightness(50%) blur(1px);
   img {
     filter: blur(3px);
   }
 }
+
+// .locked:hover {
+//   background-image: url('./images/lock-solid.svg');
+// }
 
 .reward-card:hover {
   transform: scale(1.05);
