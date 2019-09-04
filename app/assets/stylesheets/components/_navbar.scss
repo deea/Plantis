@@ -6,7 +6,10 @@
   z-index: 9999;
   padding: 4px 8px;
   background-color: #ECECEC;
+}
 
+.navbar-home {
+  background-color: $primary_color !important;
 }
 .navbar-lewagon {
   justify-content: space-between;
@@ -29,10 +32,25 @@
   color: $primary_color;
 }
 
+.logo-txt-home {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  margin-left: 10px;
+  // color: #B5DDA4;
+  color: white;
+}
+
 #logo {
   font-size: 20px;
   // color: #B5DDA4;
   color: $primary_color;
+  margin-left: 10px;
+}
+
+#logo-home {
+  font-size: 20px;
+  // color: #B5DDA4;
+  color: white;
   margin-left: 10px;
 }
 

@@ -31,7 +31,11 @@
   </head>
   <body>
     <div class="page-container">
-      <%= render 'shared/navbar' %>
+      <% if current_page?(root_path) %>
+        <%= render 'shared/navbar-home' %>
+      <% else %>
+        <%= render 'shared/navbar' %>
+      <% end %>
       <%= render 'shared/flashes' %>
       <div class="content-wrap">
         <%= yield %>
