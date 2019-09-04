@@ -38,10 +38,12 @@
     </div>
   </div>
 </div>
+
 <div class="content-block">
+
   <div class="content-left">
     <div class="leaderboard-header">
-      <h1>Leaderboard</h1>
+      <h3>Leaderboard</h3>
     </div>
     <div class="leaderboard-content">
       <% @users.first(10).each.with_index do |user, index| %>
@@ -49,24 +51,24 @@
       <% end %>
     </div>
   </div>
+
   <div class="content-right">
     <div class="following-activity">
-      <h4>
+      <h3>
         Activities
-      </h4>
-      <% @activities.order(created_at: :desc).each do |activity| %>
-        <% next if activity.trackable.nil? %>
-          <div>
+      </h3>
+      <div class="activity-content">
+        <% @activities.order(created_at: :desc).each do |activity| %>
+          <% next if activity.trackable.nil? %>
             <% if activity.key == "user_plant.water_plant" %>
-              <%= activity.owner.firstname + " " + activity.owner.lastname %> watered <%= activity.trackable.nickname %>
+              <div><%= activity.owner.firstname + " " + activity.owner.lastname %> watered <%= activity.trackable.nickname %></div>
             <% elsif activity.key == "user_plant.create" %>
-              <%= activity.owner.firstname + " " + activity.owner.lastname %> added a <%= activity.trackable.plant.name %> named <%= activity.trackable.nickname %>
+              <div><%= activity.owner.firstname + " " + activity.owner.lastname %> added a <%= activity.trackable.plant.name %> named <%= activity.trackable.nickname %></div>
             <% elsif activity.key == "follow.create" %>
-              <%= activity.owner.firstname + " " + activity.owner.lastname %> started following <%= activity.trackable.following.firstname + " " +  activity.trackable.following.lastname %>
+              <div><%= activity.owner.firstname + " " + activity.owner.lastname %> started following <%= activity.trackable.following.firstname + " " +  activity.trackable.following.lastname %></div>
             <% else %>
               <% next %>
-            <% end %>
-          </div>
+          <% end %>
           <div class="likes">
             <div class="activity-like" data-id=<%= activity.id %>>
               <%= render "likes/like", activity:activity %>
@@ -75,13 +77,20 @@
               <em><%= seconds_to_days(Time.now() - activity.created_at) %></em>
             </p>
           </div>
-      <% end %>
+        <% end %>
       </div>
+    </div>
+
+  </div>
+
+
       <div class="discover">
         <h3>People you may know</h3>
         <div class="user-cards-container">
         <% @follow_users.each do |user| %>
-          <%= render './shared/user-card', user: user %>
+          <div data-user=<%= user.id %>>
+            <%= render './shared/user-card', user: user %>
+          </div>
         <% end %>    
         </div>
       </div>
