@@ -53,12 +53,18 @@
           <button class="btn btn-outline-light my-2 my-sm-0 btn-primary" type="submit" ><i class="fas fa-search"></i></button>
         </form>
       </div>
-      <div class="users">
+     <!--  <div class="users">
         <h4>
           Users
         </h4>
-        <%= render @users %>
-      </div>
+        <%=  @users %>
+      </div> -->
+        <div class="calendar-block">
+    <h3>Upcoming Events</h3>
+    <br>
+    <div id="calendar" data-events="<%= current_user.user_plants.create_calendar_details %>"></div>
+  </div>
+  <!-- <div class="rewards-cards-container">
       <div class="following-activity">
         <h4>
           Activities
@@ -86,7 +92,7 @@
             </div>
           </div>
         <% end %>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
