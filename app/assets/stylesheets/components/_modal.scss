@@ -5,6 +5,7 @@
 
 .modal-content {
   border-radius: 15px !important;
+  overflow: hidden;
 }
 
 .modal-header {
@@ -36,6 +37,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .modal-body > h5 {
