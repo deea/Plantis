@@ -49,4 +49,13 @@ class User < ApplicationRecord
     self.seeds += points
     user_level
   end
+
+  def badge
+    return "Plant-killer" if self.level == 0
+    return "First-aider" if self.level == 1
+    return "Garden-nurse" if self.level == 2
+    return "Leaves-Doctor" if self.level == 3
+    return "Petal-Specialist" if self.level == 4
+    return "Green-Master" if self.level == 5
+  end
 end
