@@ -22,30 +22,34 @@
       <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
       <% unless current_user == @user %>
         <%= link_to "Follow", follow_user_path(@user), :method => :post, class: "btn btn-primary"  %>
-        <% end %>
+      <% end %>
     </div>
   </div>
   <div class="jungle-plant-main-container">
     <div class="jungle-plant-main-container-sub">
-      <div>
-        <h4>
-          Plants
-        </h4>
-      </div>
+      <h2>
+        Plants that need watering
+      </h2>
+      <% if @plants_to_water.empty? %>
+        <h4><em>(none)</em></h4>
+      <% end %>
       <div class="jungle-card-container">
-        <% @user_plants.each do |plant| %>
-          <%= render 'shared/user-plant-card', plant: plant  %>
-          <% if current_user == @user %>
-            <% if plant.needs_water? %>
-              <%= render './shared/modal-water', plant: plant %>
-            <% else %>
-              <%= render './shared/modal-info', plant: plant %>
-            <% end %>
-          <% end %>
-
+        <% @plants_to_water.each do |plant| %>
+          <%= render 'shared/user-plant-card', plant: plant %>
+          <%= render './shared/modal-water', plant: plant %>
+        <% end %>
+      </div>
+      <h2>
+        Plants that are thriving
+      </h2>
+      <div class="jungle-card-container">
+        <% @plants_to_not_water.each do |plant| %>
+          <%= render 'shared/user-plant-card', plant: plant %>
+          <%= render './shared/modal-info', plant: plant %>
         <% end %>
       </div>
     </div>
+
 <!--     <div class="social">
       <div class="search-form">
         <form action="/users" method="get" class="form-inline my-2 my-lg-0">

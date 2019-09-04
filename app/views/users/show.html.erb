@@ -1,6 +1,8 @@
 <div class="banner-my-seeds" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "seeds.jpg" %>)">
   <div class="user-profile-header">
-      <%= cl_image_tag current_user.photo, :gravity=>"face", :width=>234, :height=>234, class: "avatar-profile" %>
+
+      <%= cl_image_tag current_user.photo, :gravity=>"face", :width=>234, :height=>234, :crop=>"thumb", class: "avatar-profile" %>
+      <span class="badge badge-pill badge-primary"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
       <h1><%= @user.firstname%> <%= @user.lastname%></h1>
   </div>
   <div class="profile-content">
@@ -78,7 +80,9 @@
       <div class="discover">
         <h3>People you may know</h3>
         <div class="user-cards-container">
-          <%= render './shared/user-card' %>
+        <% @follow_users.each do |user| %>
+          <%= render './shared/user-card', user: user %>
+        <% end %>    
         </div>
       </div>
     </div>
