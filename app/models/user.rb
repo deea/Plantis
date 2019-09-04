@@ -55,7 +55,7 @@ class User < ApplicationRecord
     return "First-aider" if self.level == 1
     return "Garden-nurse" if self.level == 2
     return "Leaves-Doctor" if self.level == 3
-    return "Petals-Specialist" if self.level == 4
+    return "Petal-Specialist" if self.level == 4
     return "Green-Master" if self.level == 5
   end
 end
