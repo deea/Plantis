@@ -73,7 +73,7 @@ henry = User.create!(
 
 sofie = User.create!(
   firstname: 'Sophie',
-  lastname: 'James',
+  lastname: 'Peterson',
   email: 'sof@gmail.com',
   remote_photo_url: sophie_pic,
   password: 'London123'
@@ -89,7 +89,7 @@ chris = User.create!(
 
 sarah = User.create!(
   firstname: 'Sarah',
-  lastname: 'James',
+  lastname: 'Murphy',
   email: 'sarah@gmail.com',
   remote_photo_url: sarah_pic,
   password: 'London123'

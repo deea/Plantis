@@ -1,0 +1,17 @@
+  <% @users.each do |user| %>
+<a href="/user_plants?user=<%= user.id %>">
+    <div class="card-user user-card">
+      <div class="avatar-container">
+      <%= render './shared/user-avatar-large', user: user %>
+      </div>
+      <div class="card-product-infos">
+        <h5 class="user-name"><%= user.firstname %> <%= user.lastname %></h5>
+        <p class="user-seeds"><%= user.seeds %> seeds</p>
+        <p> Level <%= user.level %></p>
+        <% if current_user.following %>
+        <%= link_to "Follow", follow_user_path(user), :method => :post, class: "btn btn-primary"  %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</a>
