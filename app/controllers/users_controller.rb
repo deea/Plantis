@@ -12,24 +12,23 @@ class UsersController < ApplicationController
     leaderboard
     @activities = PublicActivity::Activity.where(owner_id: current_user.following_ids)
     authorize @user
+    @follow_users = User.where.not(id: current_user.id) - current_user.following
   end
 
   def follow
+
     if current_user.follow(@user.id)
-    #   respond_to do |format|
-    #     format.html { redirect_to root_path }
-    #     format.js
-    #   end
-    # end
-      redirect_to user_plants_path(current_user)
-      authorize current_user
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
     end
+    authorize current_user
   end
 
   def unfollow
     if current_user.unfollow(@user.id)
       respond_to do |format|
-        format.html { redirect_to root_path }
         format.js { render action: :follow }
       end
     end

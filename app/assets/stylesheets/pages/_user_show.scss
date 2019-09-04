@@ -2,6 +2,11 @@
 //   text-align: center;
 // }
 
+.user-cards-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .banner-my-seeds {
   // background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("seeds.jpeg");
   height: 625px;
@@ -112,4 +117,9 @@
 .content-left {
   width: 50%;
   flex-grow: 0;
+}
+
+.activity-content {
+  width: 90%;
+  margin: 0 auto;
 }
