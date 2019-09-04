@@ -8,17 +8,16 @@
 .user-card-product-infos {
   display: flex;
   flex-direction: row;
-  justify-content: space-between
+  justify-content: space-between;
 }
 .card-user {
  overflow: hidden;
- max-width: 580px;
+ width: 240px;
  height: 80px;
  background: white;
  box-shadow: 0 0 15px rgba(0,0,0,0.2);
  display: flex;
  align-items: center;
- min-width: 480px;
  margin: 5px;
  justify-content: space-between;
 }
@@ -41,5 +40,11 @@
  margin-top: 8px;
 }
 .follow-margin {
-  margin-right:20px;
+  margin-right: 20px;
 }
+
+.follow-margin .btn {
+  font-size: .75rem;
+}
+
+

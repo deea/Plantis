@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     leaderboard
     @activities = PublicActivity::Activity.where(owner_id: current_user.following_ids)
     authorize @user
+    @follow_users = User.where.not(id: current_user.id) - current_user.following
   end
 
   def follow
