@@ -16,6 +16,9 @@ Rails.application.routes.draw do
       post :follow, to: "users#follow"
       post :unfollow, to: "users#unfollow"
     end
+    collection do
+      get :leaderboard, to: "users#leaderboard"
+    end
   end
   get "user/index", to: "user#index"
   post "like/:id", to: "likes#like", as: 'like'

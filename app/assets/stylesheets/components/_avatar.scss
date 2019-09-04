@@ -3,8 +3,11 @@
   height: 40px !important;
   border-radius: 50%;
 }
+.avatar-parent {
+  position: relative;
+}
 .avatar-large {
-  width: 45px;
+  width: 80px;
   border-radius: 50%;
 }
 .avatar-bordered {

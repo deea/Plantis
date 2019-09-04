@@ -34,6 +34,13 @@ class UsersController < ApplicationController
     authorize current_user
   end
 
+  def leaderboard
+    @users = User.all.sort_by do |user|
+      user.level
+    end.reverse
+    skip_authorization
+  end
+
   private
 
   def set_user

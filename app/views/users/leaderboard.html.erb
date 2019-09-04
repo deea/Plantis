@@ -1,0 +1,12 @@
+<div class="banner-leaderboard" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "leaderboard-banner2.jpg" %>)">
+  <div class="leaderboard-header">
+    <h1>Leaderboard</h1>
+  </div>
+</div>
+<div class="page-content">
+  <div class="leaderboard-content">
+    <% @users.first(10).each.with_index do |user, index| %>
+      <%= render 'shared/leaderboard-card', user: user, index: index %>
+    <% end %>
+  </div>
+ </div> 
