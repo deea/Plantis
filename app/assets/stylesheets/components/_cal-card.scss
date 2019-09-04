@@ -1,0 +1,50 @@
+.cal-card {
+  min-width: 480px;
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-container {
+  width: 100px;
+  padding-left: 10px;
+}
+
+.cal-card-user {
+ overflow: hidden;
+ height: 120px;
+ background: white;
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ display: flex;
+ align-items: center;
+}
+.cal-photo-container {
+  height: 100%;
+}
+.cal-card-user img {
+  height: 120px;
+  width: 120px;
+}
+.cal-card-user h2 {
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0;
+}
+.cal-card-user p {
+ font-size: 12px;
+ line-height: 1.4;
+ opacity: .7;
+ margin-bottom: 0;
+ margin-top: 8px;
+}
+
+.cal-water-logo {
+  width: 40px !important;
+  height: 40px !important;
+  margin-right: 10px;
+  margin-bottom: 58px;
+}
+.cal-water-container {
+
+}
+
