@@ -10,7 +10,12 @@ class UserPlantsController < ApplicationController
       @user = User.find(params[:user])
     end
     @activities = PublicActivity::Activity.where(owner_id: current_user.following_ids)
-
+    @plants_to_water = UserPlant.all.select do |plant|
+      (plant.user == @user) && plant.needs_water?
+    end
+    @plants_to_not_water = UserPlant.all.select do |plant|
+      (plant.user == @user) && !plant.needs_water?
+    end
   end
 
   def show
