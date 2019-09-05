@@ -307,6 +307,7 @@ jenni = User.create!(
   email: 'jenni@gmail.com',
   remote_photo_url: jen,
   password: 'London123'
+  seeds: 640,
 )
 
 henry = User.create!(
@@ -331,6 +332,7 @@ chris = User.create!(
   email: 'chris@gmail.com',
   remote_photo_url: chris_pic,
   password: 'London123'
+  seeds: 980,
 )
 
 sarah = User.create!(
