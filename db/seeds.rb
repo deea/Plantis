@@ -120,7 +120,7 @@ parlor_palm = Plant.create!(
 )
 cool_plant = Plant.create!(
   name:         'Cool Plant',
-  latin_name: 'Cannabis Indica',
+  latin_name: 'Cannabis Sativa',
   remote_photo_url:      cool,
   water_freq:  4,
   temperature: 'These plants are coolest between 60°- 90°F (15°- 32°C) for most of the year.',
