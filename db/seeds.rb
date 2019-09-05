@@ -11,6 +11,13 @@ aloe = 'https://static.turbosquid.com/Preview/2014/07/11__09_40_14/nmodel_02_53_
 lily = 'https://assets.bakker.com/ProductPics/560x676/41996-01-BAKI_20190429115731.jpg'
 fig = 'https://img.crocdn.co.uk/images/products2/pl/20/00/02/81/pl2000028196.jpg?width=940&height=940'
 orchid = 'https://img.crocdn.co.uk/images/products2/pl/20/00/02/81/pl2000028180.jpg?width=940&height=940'
+corn = 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/20/pl2000032072.jpg?width=940&height=940'
+parlor = 'https://cdn.shopify.com/s/files/1/0108/5782/products/Parlor_Palm-_Neanthe_bella.jpg?v=1548523448'
+bamboo = 'https://www.joyusgarden.com/wp-content/uploads/2017/01/Lucky-Bamboo-care-tips-you-should-know.jpg'
+alu = 'https://mypassiflora.com/wp-content/uploads/2019/02/20190207_093811.jpg'
+dumb = 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/35/pl2000033597.jpg?width=940&height=940'
+panda = 'https://images-na.ssl-images-amazon.com/images/I/71qrJSpYXLL._SX425_.jpg'
+swiss = 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/27/pl2000032789.jpg?width=940&height=940'
 
 spider_plant = Plant.create!(
   name:         'Spider Plant',
@@ -78,6 +85,103 @@ moth_orchid = Plant.create!(
 
   Once a stalk begins growing over 12 inches tall or so, you will find it might need to be supported (with a stake) to grow upright.'
 )
+corn_plant = Plant.create!(
+  name:         'Corn Plant',
+  latin_name: 'Dracaena Fragrans',
+  remote_photo_url:      corn,
+  water_freq:  6,
+  temperature: 'Temperatures from 60°F (15°C) - 75°F (24°C) are ideal. Under 55°F/12°C is going to harm the plant which may become noticeable if the leaves begin curling. Try and avoid the plant being near cold drafts, which will also cause harm.',
+  light: "A good mix of sun shine and shade is ideal for this dracaena, but hardly any direct sunlight. Although it grows quicker and better in bright light you'll also find it survives and grows well enough in low light conditions.",
+  watering: 'We would advise a grower to keep the soil slightly damp to the touch and in the winter slightly dry.',
+  soil: 'Most well draining potting soil mix types are fine to use.',
+  re_potting: "Once very 2 -3 years and a pot one size bigger if it's becoming terribly pot bound. Slightly pot bound is fine.",
+  level_of_care: 'This plant need little care, though be careful with your pets, this plant is toxic for cats and dogs'
+)
+parlor_palm = Plant.create!(
+  name:         'Parlor Palm',
+  latin_name: 'Chamaedorea Elegans',
+  remote_photo_url:      parlor,
+  water_freq:  8,
+  temperature: 'Average warmth 65°F (18°C) and above is fine and no less than 50°F (10°C) at night.',
+  light: "These are not demanding for the grower when it comes to providing enough light. Any shaded type room will suffice with indirect sunlight.",
+  watering: "Watering the parlor palm too much will cause growing problems and could possibly kill it off. A small amount of watering once the soil starts to dry. Very little is needed in the winter. Making sure the roots have good drainage is something they like.",
+  soil: 'Any decent potting mix will suffice (soil or soilless).',
+  re_potting: "Re-pot only when necessary, like when it becomes pot bound, because these do not like being disturbed too often .",
+  level_of_care: 'This plant need few attention.'
+)
+lucky_bamboo_plant = Plant.create!(
+  name:         'Lucky Bamboo Plant',
+  latin_name: 'Dracaena Sanderiana',
+  remote_photo_url:      bamboo,
+  water_freq:  7,
+  temperature: "Warm room temperature's and above are advised 65°F (18°C) - 90°F (32°C). Avoid lower than 55°F/12°C in the winter.",
+  light: "In it's natural habitat the lucky bamboo grows under the cover of shaded trees, so place your plant in a bright spot without direct sunlight which can burn the leaves that will mimic their natural living space.",
+  watering: "In a vase or water type pot change the water once every 7 days with distilled or bottled water. If your dracaena braunii is grown in soil (which is it's natural way of growing), water once the soil becomes slightly dry to the touch.",
+  soil: "A well draining potting soil mix is advised.",
+  re_potting: "Re-pot a plant living in soil when it becomes pot bound or every 2 years. If your plant sits in water with pebbles at the bottom for stability, re-pot to a bigger container once the previous one becomes too small and when the pebbles and container need cleaning. Cleaning the water container will prevent bacteria problems.",
+  level_of_care: "The water has to be replaced every 7 days, apart from this, the lucky bamboo plant don't need much attention"
+)
+aluminium_plant = Plant.create!(
+  name:         'Aluminum Plant',
+  latin_name: 'Pilea Cadierei',
+  remote_photo_url:      alu,
+  water_freq:  5,
+  temperature: 'Pilea cadierei requires a year-round temperature between 60-75 ºF (15-23 ºC). It can tolerate short periods of time outside of this temperature range, but continued exposure will kill the plant.',
+  light: "his plant requires at least four hours of indirect, but bright, sunlight a day. Do not permit this plant to be exposed to overly bright or direct sunlight. Too much sun will burn the leaves and cause the green parts to turn brown.",
+  watering: "The Aluminum plant needs to be watered differently during different times of the year. During spring and summer, the top quarter inch of the soil should be kept moist. During fall and winter, allow the top quarter inch of soil to dry out before watering again. Do not permit water to stand in the saucer underneath the plant.",
+  soil: "This plant prefers a sandy soil mixture to live in. Combine one part clean sand (or perlite) with two parts peat to provide the required soil content for continued health.",
+  re_potting: "Check the root density of Pilea cadierei every spring. If the roots are becoming overly dense, transplant the plant to a size larger pot. If you do not, the root system will break the container in an attempt to find more room to grow.",
+  level_of_care: 'Trim the leaves when they turn yellow. Be careful with bugs that tend to eat the green part of the leaves'
+)
+dumb_cane = Plant.create!(
+  name:         'Dumb Cane',
+  latin_name: 'Dieffenbachia Amoena',
+  remote_photo_url:      dumb,
+  water_freq:  3,
+  temperature: "Dieffenbachia amoena grows best when the temperature it is exposed to is between 65-75 ºF (18-23 ºC). Outside of this temperature zone, growth will continue at a greatly reduced rate, with tolerance extremes ranging from 40-90 ºF (4-35 ºC) Beyond these extremes, the plant will stop growing and may die with prolonged exposure.",
+  light: "This plant prefers bright, indirect sun light for the optimal growth. It will accept lighting conditions up to full shade and continue stunted growth. Full sun will burn the leaves.",
+  watering: "For the best results, keep the dumb cane plant's top inch of soil moist at all times. It will tolerate extended periods of watering neglect, but the leaves will begin to shrivel. Watering makes the leaves stiffen. Before moving the plant, allow the soil to dry out. This will give the leaves a more rubbery texture which will better survive the handling process.",
+  soil: "This plant is not picky about its soil conditions. It will grow in almost any soil mix except sand and orchid mixtures. For best results, a one to one mixture of potting soil and perlite should be used.",
+  re_potting: "This plant needs to have its root density checked annually in the spring. If the roots are becoming dense, re-pot into a size bigger pot. Reduce watering for a week before transplant.",
+  level_of_care: 'This plant need relative cares, especially during the bloom period, Buds that turn brown have to be immediately removed'
+)
+panda_plant = Plant.create!(
+  name:         'Panda Plant',
+  latin_name: 'Kalanchoe Tomentosa',
+  remote_photo_url:      panda,
+  water_freq:  8,
+  temperature: "Temperatures between 60-75 ºF (15-23 ºC) are advised.",
+  light: "his kalanchoe - like many other succulents loves basking in bright light and sunshine. A mixture of direct, indirect and shade is a good balance of sunlight - if that can be provided.",
+  watering: "Only water once the soil has become dry and then soak the soil, but do not leave water in the bottom tray. During the winter you'll need to water less. Because this is a succulent - it stores water within its leaves, so even if you forget to water for a period of time the plant will be fine.",
+  soil: "Use a cacti and succulent potting mix, or your own mix which drains easily (part sand).",
+  re_potting: "The panda plant is a slow grower which will only need re-potting once every 2 years and then less once it matures.",
+  level_of_care: "The panda plant doesn't need much attention"
+)
+swiss_cheese_plant = Plant.create!(
+  name:         'Swiss Cheese Plant ',
+  latin_name: 'Monstera Deliciosa',
+  remote_photo_url:      swiss,
+  water_freq:  8,
+  temperature: '',
+  light: "",
+  watering: '',
+  soil: '',
+  re_potting: "",
+  level_of_care: ''
+)
+parlor_palm = Plant.create!(
+  name:         'Parlor Palm',
+  latin_name: 'Chamaedorea Elegans',
+  remote_photo_url:      parlor,
+  water_freq:  8,
+  temperature: '',
+  light: "",
+  watering: '',
+  soil: '',
+  re_potting: "",
+  level_of_care: ''
+)
+
 
 puts 'Creating users...'
 
