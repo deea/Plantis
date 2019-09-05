@@ -4,7 +4,7 @@
   <div class="cal-card-user cal-card">
       <div class="date-container">
       <p> <small><%= (Date.today + plant.days_until_water).strftime("%a") %></small> </p>
-      <h5> <%= (Date.today + plant.days_until_water + 1).wday.ordinalize %></h5>
+      <h5> <%= (Date.today + plant.days_until_water).strftime("%e").to_i.ordinalize %></h5>
       </div>
         <div class="cal-photo-container">
           <% if plant.photo.present? %>
