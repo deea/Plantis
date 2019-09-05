@@ -17,7 +17,7 @@
   // box-shadow: 0 0 7px rgba(0,0,0,0.2);
   min-width: 260px;
   max-width: 260px;
-  margin: 10px;
+  margin: 10px -10px;
   border-radius: 3px;
   border: solid 1px;
   border-color: #CFCECC;
@@ -35,7 +35,9 @@
   padding: 70px;
 }
 
-
+.water-header {
+  margin-left: 23px;
+}
 .jungle-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -61,7 +63,7 @@
 
 .badge-jungle{
     top: 334px;
-    left: 98px;
+    left: 81px;
 }
 
 a {
@@ -114,7 +116,7 @@ a {
   margin-left: 0px;
   border-radius: 3px;
   padding: 15px;
-  margin-top: 60px;
+  margin-top: 9px;
   min-width: 245px;
 }
 
