@@ -1,6 +1,5 @@
 
 .navbar{
-  position: fixed;
   width: 100%;
   height: 70px;
   z-index: 9999;
@@ -8,6 +7,11 @@
   // background-color: #ECECEC;
   background-color: $primary_color
 
+  box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,0.2);
+}
+
+.navbar-home {
+  background-color: $primary_color !important;
 }
 .navbar-lewagon {
   justify-content: space-between;
@@ -30,10 +34,25 @@
   // color: $primary_color;
 }
 
+.logo-txt-home {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  margin-left: 10px;
+  // color: #B5DDA4;
+  color: white;
+}
+
 #logo {
   font-size: 20px;
   color: #ECECEC;
   // color: $primary_color;
+  margin-left: 10px;
+}
+
+#logo-home {
+  font-size: 20px;
+  // color: #B5DDA4;
+  color: white;
   margin-left: 10px;
 }
 
