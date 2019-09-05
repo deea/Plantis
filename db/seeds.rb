@@ -306,7 +306,8 @@ jenni = User.create!(
   lastname: 'Green',
   email: 'jenni@gmail.com',
   remote_photo_url: jen,
-  password: 'London123'
+  password: 'London123',
+  seeds: 640,
 )
 
 henry = User.create!(
@@ -314,7 +315,8 @@ henry = User.create!(
   lastname: 'James',
   email: 'henry@gmail.com',
   remote_photo_url: henry_pic,
-  password: 'London123'
+  password: 'London123',
+  seeds: 220,
 )
 
 sofie = User.create!(
@@ -322,7 +324,8 @@ sofie = User.create!(
   lastname: 'Peterson',
   email: 'sof@gmail.com',
   remote_photo_url: sophie_pic,
-  password: 'London123'
+  password: 'London123',
+  seeds: 40,
 )
 
 chris = User.create!(
@@ -330,7 +333,8 @@ chris = User.create!(
   lastname: 'James',
   email: 'chris@gmail.com',
   remote_photo_url: chris_pic,
-  password: 'London123'
+  password: 'London123',
+  seeds: 980,
 )
 
 sarah = User.create!(
@@ -338,35 +342,40 @@ sarah = User.create!(
   lastname: 'Murphy',
   email: 'sarah@gmail.com',
   remote_photo_url: sarah_pic,
-  password: 'London123'
+  password: 'London123',
+  seeds: 1360,
 )
 paul = User.create!(
   firstname: 'Paul',
   lastname: 'Legendre',
   email: 'paul@gmail.com',
   remote_photo_url: paul_pic,
-  password: 'London123'
+  password: 'London123',
+  seeds: 180,
 )
 bobby = User.create!(
   firstname: 'Bobby',
   lastname: 'Lawrence',
   email: 'bobby@gmail.com',
   remote_photo_url: bobby_pic,
-  password: 'London123'
+  password: 'London123',
+  seeds: 320,
 )
 emily = User.create!(
   firstname: 'Emily',
   lastname: 'Stone',
   email: 'emily@gmail.com',
   remote_photo_url: emily_pic,
-  password: 'London123'
+  password: 'London123',
+  seeds: 560,
 )
 holly = User.create!(
   firstname: 'Holly',
   lastname: 'Gueye',
   email: 'holly@gmail.com',
   remote_photo_url: holly_pic,
-  password: 'London123'
+  password: 'London123',
+  seeds: 20,
 )
 
 puts 'Creating user plants...'
