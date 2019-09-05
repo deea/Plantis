@@ -4,7 +4,7 @@ module ApplicationHelper
       return "today"
     else
       days = (seconds / 86_400).round
-      return "#{days} #{pluralize(days, 'day')} ago"
+      return "#{pluralize(days, 'day')} ago"
     end
   end
 end
