@@ -2,15 +2,15 @@
   <div class="user-profile-header">
 
       <%= cl_image_tag current_user.photo, :gravity=>"face", :width=>234, :height=>234, :crop=>"thumb", class: "avatar-profile" %>
-      <span class="badge badge-pill badge-primary"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
       <h1><%= @user.firstname%> <%= @user.lastname%></h1>
   </div>
   <div class="profile-content">
-    <div class="level">
-      <h2>Level : <%= @user.level %></h2>
-    </div>
     <div class="current-seeds">
         <h2>Seeds: <%= @user.seeds %></h2>
+        <div class="level">
+          <h2>Level : <%= @user.level %></h2>
+          <span class="badge badge-pill badge-primary"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
+        </div>
         <br>
           <div class="progress">
             <div class="level-line" style="left: 6.6%">
