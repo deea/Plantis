@@ -24,7 +24,7 @@ if (calendar) {
 }
 
 var slideIndex = 0;
-carousel();
+// carousel();
 
 // function carousel() {
 //   var i;

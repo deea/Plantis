@@ -46,7 +46,7 @@
       <div class="jungle-card-container">
         <% @plants_to_not_water.each do |plant| %>
           <%= render 'shared/user-plant-card', plant: plant %>
-          <%= render './shared/modal-info', plant: plant %>
+          <%= render './shared/modal-water', plant: plant %>
         <% end %>
       </div>
     </div>

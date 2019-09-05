@@ -1,21 +1,6 @@
-<div class="modal info fade" id="modal-show<%= plant.id %>" tabindex="-1" role="dialog" aria-labelledby="Plant" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel"> <%= plant.nickname %></h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-photo">
-        <% if plant.photo.present? %>
-          <%= cl_image_tag plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
-        <% else %>
-          <%= cl_image_tag plant.plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
-        <% end %>
-      </div>
-      <div class="modal-body">
-        <h5><i class="fas fa-calendar-day"></i> <%= plant.days_until_water %> <%= "day".pluralize(plant.days_until_water) %> until water!</h5>
+<div class="water-anyway">
+  <div class="modal-body">
+        <p><i class="fas fa-calendar-day"></i> <%= plant.days_until_water %> <%= "day".pluralize(plant.days_until_water) %> until water!</p>
       </div>
       <div class="modal-footer">
         <%= link_to "Water Anyway?", water_anyway_path(plant), method: :patch, class: "btn btn-primary modal-water-action" %>
@@ -23,6 +8,4 @@
       <div class="modal-upl-delete">
         <p> <%= link_to "My plant has died", user_plant_path(plant), method: :delete, class: "btn btn-warning plant-died" %> </p>
       </div>
-    </div>
-  </div>
 </div>
