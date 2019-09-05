@@ -16,6 +16,10 @@ class UserPlantsController < ApplicationController
     @plants_to_not_water = UserPlant.all.select do |plant|
       (plant.user == @user) && !plant.needs_water?
     end
+
+    @sorted = @user_plants.sort_by { |plant| plant.days_until_water}
+    @sorted_other = @sorted.map(&:days_until_water)
+    # raise
   end
 
   def show
