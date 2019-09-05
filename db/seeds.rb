@@ -245,7 +245,7 @@ donkeys_tail_plant = Plant.create!(
   water_freq:  14,
   temperature: 'Temperatures averaging 65°F/18°C - 80°F/26°C are very good and not much below 50°F/10°C. During winter it is fine if the temperature drops down and it can encourage them to actually bloom in the forthcoming spring season.',
   light: "For this species to grow well you will need to at least provide a good amount of direct light. And, if you can sunshine, but not too much during the afternoon summer sun.",
-  watering: "During the growing season from April - September water the plant thoroughly and then water when the soil becomes dry to the touch. During winter cut down on the watering, which the plant may only need once a month. Remember it's a succulent and stores water in it leaves and stems...when you think it's lacking water it is not. Underwatering is much safer that overwatering and it's the No 1 killer for this plant."
+  watering: "During the growing season from April - September water the plant thoroughly and then water when the soil becomes dry to the touch. During winter cut down on the watering, which the plant may only need once a month. Remember it's a succulent and stores water in it leaves and stems...when you think it's lacking water it is not. Underwatering is much safer that overwatering and it's the No 1 killer for this plant.",
   soil: "Potting mix that keeps the roots well aerated and drains well is required. To keep it simple I would pot up with a ready made cactus soil mix.",
   re_potting: "You will only need to repot this plant during spring when the existing pot has become to small for it and use a shallow pot (the roots do not grow very long).",
   level_of_care: "This plant doesn't need too much attention, be very careful not to over-water it"
