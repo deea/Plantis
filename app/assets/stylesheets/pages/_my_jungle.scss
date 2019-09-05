@@ -62,8 +62,11 @@
 }
 
 .badge-jungle{
-    top: 334px;
-    left: 81px;
+    margin-left: 0px !important;
+    font-size: 8px !important;
+    position: relative !important;
+    height: 19px !important;
+    padding: 5px 6px;
 }
 
 a {
@@ -164,6 +167,15 @@ a {
     }
 }
 
+.underbanner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.uppercard {
+  display: flex;
+  justify-content: space-between;
+}
 
 .fc-day-grid-container {
   overflow: initial !important;
