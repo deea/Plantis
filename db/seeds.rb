@@ -296,6 +296,10 @@ henry_pic = 'https://www.techadvisor.co.uk/cmsdata/author/3636812/team_tech_advi
 sophie_pic = 'https://www.iwill.org.uk/wp-content/uploads/2019/04/sophie-400x400.jpg'
 chris_pic = 'https://www.birmingham.ac.uk/Images/College-ArtsLaw-only/staff/english/mourant-chris-315-Cropped-230x230.jpg'
 sarah_pic = 'https://freedomhouse-files.s3.amazonaws.com/Repucci_Headshot_Photo_230px.jpg'
+paul_pic = 'https://opinionhall.com/wp-content/uploads/2018/07/weird-bug-makes-samsung-phones-text-random-photos-to-random-people.jpg'
+bobby_pic = 'http://ofad.org/files/daily-photo/recent-portraits-random-people-in-random-places_11.jpg'
+emily_pic = 'https://davidbruceblog.files.wordpress.com/2014/05/img_9760.jpg'
+holly_pic = 'https://66.media.tumblr.com/19f2f3b46ea47fcf9b65bd625a344b63/tumblr_pfem20SnjX1xuhbodo5_250.png'
 
 jenni = User.create!(
   firstname: 'Jenni',
@@ -334,6 +338,34 @@ sarah = User.create!(
   lastname: 'Murphy',
   email: 'sarah@gmail.com',
   remote_photo_url: sarah_pic,
+  password: 'London123'
+)
+paul = User.create!(
+  firstname: 'Paul',
+  lastname: 'Legendre',
+  email: 'paul@gmail.com',
+  remote_photo_url: paul_pic,
+  password: 'London123'
+)
+bobby = User.create!(
+  firstname: 'Bobby',
+  lastname: 'Lawrence',
+  email: 'bobby@gmail.com',
+  remote_photo_url: bobby_pic,
+  password: 'London123'
+)
+emily = User.create!(
+  firstname: 'Emily',
+  lastname: 'Stone',
+  email: 'emily@gmail.com',
+  remote_photo_url: emily_pic,
+  password: 'London123'
+)
+holly = User.create!(
+  firstname: 'Holly',
+  lastname: 'Gueye',
+  email: 'holly@gmail.com',
+  remote_photo_url: holly_pic,
   password: 'London123'
 )
 
