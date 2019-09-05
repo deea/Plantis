@@ -16,12 +16,14 @@
 </div>
 
 <div class="plant-container">
+  <div class="plansts-header">
+    <h3 class= "h3-add">
+      Plant types:
+    </h3>
     <% if current_user.user_plants.any? %>
       <%= link_to "Visit jungle", user_plants_path, class: "btn btn-primary btn-sec btn-add" %>
     <% end %>
-  <h3 class= "h3-add">
-    Plant types:
-  </h3>
+ </div>
   <div class="cards">
     <%= render './shared/plant-card' %>
   </div>
