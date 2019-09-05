@@ -10,21 +10,28 @@
 
 <div class="jungle-content">
   <div class="seed-status-container">
-      <div class="chris-card">
-        <%= render './shared/user-avatar',user: @user %>
-        <div class="seed-status-text">
-          <%= link_to user_path(@user) do %>
-            <h6> <%= @user.firstname %></h6><span class="badge badge-pill badge-primary badge-jungle"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
-            <p> <small> <%= @user.followers.size %> <%= "follower".pluralize(@user.followers.size) %> | <%= @user.seeds %> seeds!</small></p>
-          <% end %>
-        </div>
-      </div>
-        <div class="btn-add-container">
-          <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
-          <% unless current_user == @user %>
-            <%= link_to "Follow", follow_user_path(@user), :method => :post, class: "btn btn-primary"  %>
-          <% end %>
-        </div>
+     <div id='follow-unfollow'>
+       <%= render 'follow-unfollow' %>
+     </div>
+  </div>
+
+  <div class="chris-card">
+    <%= render './shared/user-avatar',user: @user %>
+    <div class="seed-status-text">
+      <%= link_to user_path(@user) do %>
+        <h6> <%= @user.firstname %></h6>
+        <span class="badge badge-pill badge-primary badge-jungle"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
+        <p> <small> <%= @user.followers.size %> <%= "follower".pluralize(@user.followers.size) %> | <%= @user.seeds %> seeds!</small></p>
+      <% end %>
+    </div>
+   </div>
+    <div class="btn-add-container">
+      <% if @user == current_user %>
+        <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
+      <% end %>
+    <div id='follow-unfollow'>
+      <%= render 'follow-unfollow' %>
+    </div>
   </div>
   <div class="jungle-plant-main-container">
     <div class="jungle-plant-main-container-sub">
@@ -53,6 +60,7 @@
         <% end %>
       </div>
     </div>
+
     <div class="this-week-outer">
       <div class="this-week-container">
       <h6>COMING UP THIS WEEK</h6>
@@ -60,35 +68,6 @@
 
       </div>
     </div>
-  <!-- <div class="rewards-cards-container">
-      <div class="following-activity">
-        <h4>
-          Activities
-        </h4>
-        <% @activities.order(created_at: :desc).each do |activity| %>
-          <% next if activity.trackable.nil? %>
-            <div>
-              <% if activity.key == "user_plant.water_plant" %>
-                <%= activity.owner.firstname + " " + activity.owner.lastname %> watered <%= activity.trackable.nickname %>
-              <% elsif activity.key == "user_plant.create" %>
-                <%= activity.owner.firstname + " " + activity.owner.lastname %> added a <%= activity.trackable.plant.name %> named <%= activity.trackable.nickname %>
-              <% elsif activity.key == "follow.create" %>
-                <%= activity.owner.firstname + " " + activity.owner.lastname %> started following <%= activity.trackable.following.firstname + " " +  activity.trackable.following.lastname %>
-              <% else %>
-                <% next %>
-              <% end %>
-            </div>
-            <div class="likes">
-              <div class="activity-like" data-id=<%= activity.id %>>
-                <%= render "likes/like", activity:activity %>
-              </div>
-              <p>
-                <em><%= seconds_to_days(Time.now() - activity.created_at) %></em>
-              </p>
-            </div>
-          </div>
-        <% end %>
-      </div> -->
     </div>
   </div>
 </div>

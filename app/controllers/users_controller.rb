@@ -21,9 +21,11 @@ class UsersController < ApplicationController
   end
 
   def follow
+    @index = params[:index]
+
     if current_user.follow(@user.id)
       respond_to do |format|
-        format.html { redirect_to root_path }
+        format.html { redirect_to user_path(current_user) }
         format.js
       end
     end
@@ -31,6 +33,8 @@ class UsersController < ApplicationController
   end
 
   def unfollow
+    @index = params[:index]
+
     if current_user.unfollow(@user.id)
       respond_to do |format|
         format.js { render action: :follow }
