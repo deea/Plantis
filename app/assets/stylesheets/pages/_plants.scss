@@ -35,18 +35,22 @@
 }
 
 .h3-add {
-  margin-bottom: 30px
+  margin-bottom: 30px;
+  padding-bottom: 0px !important;
 }
 .search-form {
   text-align: center;
 }
 
 .btn-add {
-  margin: 25px;
-  bottom: 345px;
-  margin: 25px;
-  position: absolute;
-  left: 1240px;
+    margin: 25px;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+
+.plansts-header {
+  display:flex;
+  justify-content: space-between;
 }
 
 .cards {
