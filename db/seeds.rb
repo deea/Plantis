@@ -351,6 +351,7 @@ paul = User.create!(
   email: 'paul@gmail.com',
   remote_photo_url: paul_pic,
   password: 'London123',
+  seeds: 180,
 )
 bobby = User.create!(
   firstname: 'Bobby',
@@ -358,6 +359,7 @@ bobby = User.create!(
   email: 'bobby@gmail.com',
   remote_photo_url: bobby_pic,
   password: 'London123',
+  seeds: 320,
 )
 emily = User.create!(
   firstname: 'Emily',
@@ -365,6 +367,7 @@ emily = User.create!(
   email: 'emily@gmail.com',
   remote_photo_url: emily_pic,
   password: 'London123',
+  seeds: 560,
 )
 holly = User.create!(
   firstname: 'Holly',
@@ -372,6 +375,7 @@ holly = User.create!(
   email: 'holly@gmail.com',
   remote_photo_url: holly_pic,
   password: 'London123',
+  seeds: 20,
 )
 
 puts 'Creating user plants...'
