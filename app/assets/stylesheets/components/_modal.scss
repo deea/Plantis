@@ -1,6 +1,8 @@
 .modal {
-  top: 90px;
+  // top: 90px;
 
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 .modal-content {
@@ -57,7 +59,7 @@ h4 {
   margin: 0px 8px 0px 0px;
 }
 .water-anyway {
-  display: flex; 
+  display: flex;
   flex-direction: column;
 }
 
