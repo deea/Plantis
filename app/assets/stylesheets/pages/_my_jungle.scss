@@ -131,6 +131,11 @@ a {
   border-color: #CFCECC;
 }
 
+.week-border:last-child {
+  border-bottom: solid 0px;
+  border-color: #CFCECC;
+}
+
 .calendar-block {
   text-align: center;
   padding-top: 30px;
