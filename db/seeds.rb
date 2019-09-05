@@ -18,6 +18,8 @@ alu = 'https://mypassiflora.com/wp-content/uploads/2019/02/20190207_093811.jpg'
 dumb = 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/35/pl2000033597.jpg?width=940&height=940'
 panda = 'https://images-na.ssl-images-amazon.com/images/I/71qrJSpYXLL._SX425_.jpg'
 swiss = 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/27/pl2000032789.jpg?width=940&height=940'
+velvet = 'https://pics.davesgarden.com/pics/2006/08/30/ceejaytown/795aae.jpg'
+peruviana = 'https://www.plantthefuture.com/wp-content/uploads/2018/10/Peruvianus.png'
 
 spider_plant = Plant.create!(
   name:         'Spider Plant',
@@ -161,6 +163,42 @@ swiss_cheese_plant = Plant.create!(
   name:         'Swiss Cheese Plant ',
   latin_name: 'Monstera Deliciosa',
   remote_photo_url:      swiss,
+  water_freq:  7,
+  temperature: 'Temperatures between 65-80ºF (18-27ºC) are ideal. Lower than 65ºF (18Cº) will slow down this plants growth and below 50ºF (10ºC) will stop growth.',
+  light: "A fairly bright room or bright with plenty of shade is best. Direct sunlight will damage the leaves and not enough light can slow growth down.",
+  watering: "Between watering times allow the soil to become dry to the touch within the top couple of inches or so of soil.",
+  soil: 'A peat based potting soil mix with perlite or sand is ideal. Soil that drains well is needed.',
+  re_potting: "Re-pot once every two years approximately, during spring.",
+  level_of_care: 'Relative care is needed, lack of care is easily spottable on the plant'
+)
+green_velvet = Plant.create!(
+  name:         'Green Velvet',
+  latin_name: 'Alocasia Micholitziana',
+  remote_photo_url:      velvet,
+  water_freq:  4,
+  temperature: 'The best temperature for this plant is approximately 65-75ºF + (18-24ºC +) or more.',
+  light: "A location within a room that gets plenty of light but not indirect sunlight is suitable. Sat back from a south, east or west facing window is good.",
+  watering: 'During the spring and summer water the plant thoroughly when the top soil starts to become slightly dry to the touch. Cut right back on watering during winter.',
+  soil: 'Using a fast draining peat based potting mix will do the trick. If your using your own mix it will need to include perlite or sand and bark to improve drainage.',
+  re_potting: "The Alocasia should not need to be repotted very often after it has matured. Once very 2 years in a slightly bigger pot if it has grown much or if not just make a complete soil change – keeping the same pot. Use a clay pot if you can, because it will help dry the soil out quicker and may improve humidity being under the plant.",
+  level_of_care: 'The plant needs a special care during winter'
+)
+peruvian_apple = Plant.create!(
+  name:         'Peruvian Apple',
+  latin_name: 'Cereus Peruvianus',
+  remote_photo_url:      peruviana,
+  water_freq:  12,
+  temperature: 'Temperatures averaging 60°F/°15.5C - 75°F/23.8°C is ideal from spring to fall and a cooler 50°F/10°C – 55°F/13°, after this period.',
+  light: "The Peruvian apple cactus thrives on bright light and sun light, although direct sun when blazing hot is best avoided, when first introduced to direct sun.",
+  watering: "It's advisable to water this plant more often within the summer and much less, winter time. Like other desert type cacti their natural habitat is dry and they store water within the stems. Water this plant when the soil begins drying out, throughout spring and late summer. In late summer reduce watering until the next spring and allow the soil to be fairly dry.",
+  soil: 'A fast draining pot mixture used for cactus plants is ideal.',
+  re_potting: "While they're young they can be re-potted each year in spring. Once they mature re-pot only when necessary, with a slightly larger pot.",
+  level_of_care: 'Minimum care is needed'
+)
+bunny_ears = Plant.create!(
+  name:         'Bunny Ears',
+  latin_name: 'Opuntia Microdasys',
+  remote_photo_url:      parlor,
   water_freq:  8,
   temperature: '',
   light: "",
@@ -181,7 +219,6 @@ parlor_palm = Plant.create!(
   re_potting: "",
   level_of_care: ''
 )
-
 
 puts 'Creating users...'
 
