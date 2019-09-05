@@ -245,8 +245,8 @@ donkeys_tail_plant = Plant.create!(
   water_freq:  14,
   temperature: 'Temperatures averaging 65°F/18°C - 80°F/26°C are very good and not much below 50°F/10°C. During winter it is fine if the temperature drops down and it can encourage them to actually bloom in the forthcoming spring season.',
   light: "For this species to grow well you will need to at least provide a good amount of direct light. And, if you can sunshine, but not too much during the afternoon summer sun.",
-  watering: " During the growing season from April - September water the plant thoroughly and then water when the soil becomes dry to the touch. During winter cut down on the watering, which the plant may only need once a month. Remember it's a succulent and stores water in it leaves and stems...when you think it's lacking water it is not. Underwatering is much safer that overwatering and it's the No 1 killer for this plant."
-  soil: ' Potting mix that keeps the roots well aerated and drains well is required. To keep it simple I would pot up with a ready made cactus soil mix.',
+  watering: "During the growing season from April - September water the plant thoroughly and then water when the soil becomes dry to the touch. During winter cut down on the watering, which the plant may only need once a month. Remember it's a succulent and stores water in it leaves and stems...when you think it's lacking water it is not. Underwatering is much safer that overwatering and it's the No 1 killer for this plant."
+  soil: "Potting mix that keeps the roots well aerated and drains well is required. To keep it simple I would pot up with a ready made cactus soil mix.",
   re_potting: "You will only need to repot this plant during spring when the existing pot has become to small for it and use a shallow pot (the roots do not grow very long).",
   level_of_care: "This plant doesn't need too much attention, be very careful not to over-water it"
 )
@@ -270,7 +270,7 @@ cool_plant = Plant.create!(
   temperature: 'These plants are coolest between 60°- 90°F (15°- 32°C) for most of the year.',
   light: "This plant needs a lot of light but has to be hidden in some part of the world to avoid problems",
   watering: "The Cool Plant needs a average amount of water, to be honest I don't know mush about it, I only added it for the joke",
-  soil: 'Potting mix that keeps the roots well aerated and drains well is required.',
+  soil: "Potting mix that keeps the roots well aerated and drains well is required.",
   re_potting: "You need to rePot ;) after each floraison",
   level_of_care: 'This plant need a particularly special attention'
 )
@@ -280,7 +280,7 @@ umbrella_tree = Plant.create!(
   remote_photo_url:      umbrella,
   water_freq:  8,
   temperature: 'Grows well in average room temperatures between 60 - 75 °F (15 - 24°C) but no lower than 55F (13C) or higher than 75°F (24°C). Avoid sudden temperature drops and cold drafts.',
-  light: "asic light condition of bright without direct sunlight is best suited, although lower lighting conditions only really affects it's growth rate rather than causing any harm.",
+  light: "Basic light condition of bright without direct sunlight is best suited, although lower lighting conditions only really affects it's growth rate rather than causing any harm.",
   watering: 'The best advice is to water once the top soil becomes dry. Over-watering is more of a problem than lack of water.',
   soil: 'A peat moss based potting mix with 2 parts peat moss and 1 part perlite is suggested.',
   re_potting: "You will need to re-pot the plant once every 2 years and provide new potting mix, during spring. To be on the safe side - hold of feeding for one month because enough nutrients should be present in the new potting mix. A good solid and heavy container is needed to prevent tall and mature trees from toppling over.",
