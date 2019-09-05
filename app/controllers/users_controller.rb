@@ -17,11 +17,7 @@ class UsersController < ApplicationController
     @followings.each do |following|
       @following_users << User.find(following.following_id)
     end
-    @not_followings = current_user.following_relationships.where(active: false)
-    @not_following_users = []
-    @not_followings.each do |not_following|
-      @not_following_users << User.find(not_following.following_id)
-    end
+    @not_following_users = User.where.not(id: @following_users.map(&:id)).where.not(id: current_user.id)
   end
 
   def follow
