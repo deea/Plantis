@@ -18,10 +18,12 @@
       <% end %>
     </div>
     <div class="btn-add-container">
-      <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
-      <% unless current_user == @user %>
-        <%= link_to "Follow", follow_user_path(@user), :method => :post, class: "btn btn-primary"  %>
+      <% if @user == current_user %>
+        <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
       <% end %>
+      <div id='follow-unfollow'>
+        <%= render 'follow-unfollow' %>
+      </div>
     </div>
   </div>
   <div class="jungle-plant-main-container">
@@ -51,26 +53,6 @@
       </div>
     </div>
 
-<!--     <div class="social">
-      <div class="search-form">
-        <form action="/users" method="get" class="form-inline my-2 my-lg-0">
-          <input name="navsearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0 btn-primary" type="submit" ><i class="fas fa-search"></i></button>
-        </form>
-      </div> -->
-     <!--  <div class="users">
-        <h4>
-          Users
-        </h4>
-        <%=  @users %>
-      </div> -->
-<!--     <h3>Upcoming Events</h3>
-    <br>
-    <div id="calendar" data-events="<%= current_user.user_plants.create_calendar_details %>"></div> -->
- <!--    <br>
-    <br>
-    <br>
-    <br> -->
     <div class="this-week-outer">
       <div class="this-week-container">
       <h3>This week</h3>
@@ -78,35 +60,6 @@
 
       </div>
     </div>
-  <!-- <div class="rewards-cards-container">
-      <div class="following-activity">
-        <h4>
-          Activities
-        </h4>
-        <% @activities.order(created_at: :desc).each do |activity| %>
-          <% next if activity.trackable.nil? %>
-            <div>
-              <% if activity.key == "user_plant.water_plant" %>
-                <%= activity.owner.firstname + " " + activity.owner.lastname %> watered <%= activity.trackable.nickname %>
-              <% elsif activity.key == "user_plant.create" %>
-                <%= activity.owner.firstname + " " + activity.owner.lastname %> added a <%= activity.trackable.plant.name %> named <%= activity.trackable.nickname %>
-              <% elsif activity.key == "follow.create" %>
-                <%= activity.owner.firstname + " " + activity.owner.lastname %> started following <%= activity.trackable.following.firstname + " " +  activity.trackable.following.lastname %>
-              <% else %>
-                <% next %>
-              <% end %>
-            </div>
-            <div class="likes">
-              <div class="activity-like" data-id=<%= activity.id %>>
-                <%= render "likes/like", activity:activity %>
-              </div>
-              <p>
-                <em><%= seconds_to_days(Time.now() - activity.created_at) %></em>
-              </p>
-            </div>
-          </div>
-        <% end %>
-      </div> -->
     </div>
   </div>
 </div>
