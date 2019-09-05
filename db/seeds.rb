@@ -118,6 +118,18 @@ parlor_palm = Plant.create!(
   re_potting: "Re-pot only when necessary, like when it becomes pot bound, because these do not like being disturbed too often .",
   level_of_care: 'This plant need few attention.'
 )
+cool_plant = Plant.create!(
+  name:         'Cool Plant',
+  latin_name: 'Cannabis Sativa',
+  remote_photo_url:      cool,
+  water_freq:  4,
+  temperature: 'These plants are coolest between 60°- 90°F (15°- 32°C) for most of the year.',
+  light: "This plant needs a lot of light but has to be hidden in some part of the world to avoid problems",
+  watering: "The Cool Plant needs a average amount of water, to be honest I don't know mush about it, I only added it for the joke",
+  soil: "Potting mix that keeps the roots well aerated and drains well is required.",
+  re_potting: "You need to rePot ;) after each floraison",
+  level_of_care: 'This plant need a particularly special attention'
+)
 lucky_bamboo_plant = Plant.create!(
   name:         'Lucky Bamboo Plant',
   latin_name: 'Dracaena Sanderiana',
@@ -261,18 +273,6 @@ venus_fly_trap = Plant.create!(
   soil: 'This plant demands nutrient poor soil. Peat moss and long fiber sphagnum moss should be mixed in a 1:1 ratio for the best growing conditions.',
   re_potting: "These plants can be re-potted at any time other than their dormancy period.",
   level_of_care: "Don't forget to feed it with actual flies"
-)
-cool_plant = Plant.create!(
-  name:         'Cool Plant',
-  latin_name: 'Cannabis Indica',
-  remote_photo_url:      cool,
-  water_freq:  4,
-  temperature: 'These plants are coolest between 60°- 90°F (15°- 32°C) for most of the year.',
-  light: "This plant needs a lot of light but has to be hidden in some part of the world to avoid problems",
-  watering: "The Cool Plant needs a average amount of water, to be honest I don't know mush about it, I only added it for the joke",
-  soil: "Potting mix that keeps the roots well aerated and drains well is required.",
-  re_potting: "You need to rePot ;) after each floraison",
-  level_of_care: 'This plant need a particularly special attention'
 )
 umbrella_tree = Plant.create!(
   name:         'Umbrella Tree ',
