@@ -52,10 +52,10 @@
   <div class="content-right">
     <div class="following-activity">
       <h3>
-        Activities
+        Recent activity
       </h3>
       <div class="activity-content">
-        <% @activities.order(created_at: :desc).each do |activity| %>
+        <% @activities.order(created_at: :desc).take(10).each do |activity| %>
           <% next if activity.trackable.nil? %>
             <% if activity.key == "user_plant.water_plant" %>
               <div><%= activity.owner.firstname + " " + activity.owner.lastname %> watered <%= activity.trackable.nickname %></div>
