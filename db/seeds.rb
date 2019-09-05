@@ -283,7 +283,7 @@ umbrella_tree = Plant.create!(
   light: "asic light condition of bright without direct sunlight is best suited, although lower lighting conditions only really affects it's growth rate rather than causing any harm.",
   watering: 'The best advice is to water once the top soil becomes dry. Over-watering is more of a problem than lack of water.',
   soil: 'A peat moss based potting mix with 2 parts peat moss and 1 part perlite is suggested.',
-  re_potting: "ou will need to re-pot the plant once every 2 years and provide new potting mix, during spring. To be on the safe side - hold of feeding for one month because enough nutrients should be present in the new potting mix. A good solid and heavy container is needed to prevent tall and mature trees from toppling over.",
+  re_potting: "You will need to re-pot the plant once every 2 years and provide new potting mix, during spring. To be on the safe side - hold of feeding for one month because enough nutrients should be present in the new potting mix. A good solid and heavy container is needed to prevent tall and mature trees from toppling over.",
   level_of_care: 'Toxic to pets'
 )
 
