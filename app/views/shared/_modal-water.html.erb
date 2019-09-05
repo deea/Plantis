@@ -7,21 +7,48 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-photo">
-        <% if plant.photo.present? %>
-          <%= cl_image_tag plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
-        <% else %>
-          <%= cl_image_tag plant.plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
-        <% end %>
+      <div class="modal-water-body">
+        <div class="modal-water-photo">
+          <% if plant.photo.present? %>
+            <%= cl_image_tag plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
+          <% else %>
+            <%= cl_image_tag plant.plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
+          <% end %>
+        </div>
+        <div class="modal-water-right">
+          <div class="modal-water-name">
+            <h5><%= plant.plant.name %></h5>
+            <i>(<%= plant.plant.latin_name %>)</i>
+          </div>
+          <p>It's time to water <%= plant.nickname %></p>
+          <%= link_to "Click to Water!", water_plant_path(plant), method: :patch, class: "btn btn-primary modal-water-action"  %>
+          <p> <%= link_to "My plant has died", user_plant_path(plant), method: :delete, class: "btn btn-warning plant-died" %> </p>
+        </div>
       </div>
-      <div class="modal-body">
-        <h5>💧 It's time to water <%= plant.nickname %> 💧</h5>
-      </div>
-      <div class="modal-footer">
-        <%= link_to "Click to Water!", water_plant_path(plant), method: :patch, class: "btn btn-primary modal-water-action"  %>
-      </div>
-      <div class="modal-upl-delete">
-        <p> <%= link_to "My plant has died", user_plant_path(plant), method: :delete, class: "btn btn-warning plant-died" %> </p>
+      <div class="modal-water-footer">
+        <div class="accordion" id="plantProperties">
+          <% if !plant.plant.light.nil? %>
+            <%= render 'plant-property', property: "Light", info: plant.plant.light %>
+          <% end %>
+          <% if !plant.plant.temperature.nil? %>
+            <%= render 'plant-property', property: "Temperature", info: plant.plant.temperature %>
+          <% end %>
+          <% if !plant.plant.watering.nil? %>
+            <%= render 'plant-property', property: "Watering", info: plant.plant.watering %>
+          <% end %>
+          <% if !plant.plant.soil.nil? %>
+            <%= render 'plant-property', property: "Soil", info: plant.plant.soil %>
+          <% end %>
+          <% if !plant.plant.re_potting.nil? %>
+            <%= render 'plant-property', property: "Re-potting", info: plant.plant.re_potting %>
+          <% end %>
+          <% if !plant.plant.level_of_care.nil? %>
+            <%= render 'plant-property', property: "Level of care", info: plant.plant.level_of_care %>
+          <% end %>
+          <% if !plant.plant.pruning.nil? %>
+            <%= render 'plant-property', property: "Pruning", info: plant.plant.pruning %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
