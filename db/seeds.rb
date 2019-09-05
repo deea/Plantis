@@ -20,6 +20,13 @@ panda = 'https://images-na.ssl-images-amazon.com/images/I/71qrJSpYXLL._SX425_.jp
 swiss = 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/27/pl2000032789.jpg?width=940&height=940'
 velvet = 'https://pics.davesgarden.com/pics/2006/08/30/ceejaytown/795aae.jpg'
 peruviana = 'https://www.plantthefuture.com/wp-content/uploads/2018/10/Peruvianus.png'
+bunny = 'https://www.giromagi.com/prodotti/src/rebutia_pseudoperbella_3071.jpg'
+barrel = 'https://www.worldseedsupply.com/wp-content/uploads/1970/01/170597_107886169289992_2059048_o.jpg'
+boston = 'https://img.crocdn.co.uk/images/products2/pl/20/00/02/77/pl2000027735.jpg?width=940&height=940'
+donkey = 'https://images.immediate.co.uk/production/volatile/sites/10/2018/08/c8d01d86-da6a-44e8-ac2b-8eaa0358e8bf-ed06cc9.jpg?quality=45&resize=960,640'
+fly_trap = 'https://cdn.nurserylive.com/images/stories/virtuemart/product/resized/nurserylive-venus-flytrap-dionaea-muscipula-plant_600x600.jpg'
+cool = 'https://www.alchimiaweb.com/blog/wp-content/uploads/2011/02/planta-acabada-de-trasplantar-a-11l.jpg'
+umbrella = 'https://asepsis-kenya.com/wp-content/uploads/2018/12/scheffella-plant.jpg'
 
 spider_plant = Plant.create!(
   name:         'Spider Plant',
@@ -198,26 +205,86 @@ peruvian_apple = Plant.create!(
 bunny_ears = Plant.create!(
   name:         'Bunny Ears',
   latin_name: 'Opuntia Microdasys',
-  remote_photo_url:      parlor,
-  water_freq:  8,
-  temperature: '',
-  light: "",
-  watering: '',
-  soil: '',
-  re_potting: "",
-  level_of_care: ''
+  remote_photo_url:      bunny,
+  water_freq:  10,
+  temperature: "This cactus enjoys temperatures ranging from 70-100°F (21-37°C), but demands cooler temperatures during the winter months. Starting in the late fall, this cactus should be kept between 50-65°F (10-18°C), and away from central heating vents. The cooler spell is demanded over the course of the entire winter, during which time the segments of cactus will turn a light gray color. Failure to provide these controlled winter conditions will result in plant death the following spring.",
+  light: "Demands full light growing for most of the year, except during the winter cycle. For the plant's health, light should be reduced to partial sun during this time.",
+  watering: "The Polka-dot Cactus is a desert species. It should be given water on a regular basis during its first season in a new pot. This will help it to create a strong root system. The soil should be kept moist, but not soggy. After the first season, more sporadic watering is required. During the winter cycle, the cactus should not be watered at all, with watering to resume in the early spring.",
+  soil: 'Like most cacti, this specimen demands sandy soil-bases that drain easily. It is usually happy with the pre-packaged cactus soil found in common hardware stores. To increase drainage for a picky plant, mix in a 1:1 ratio of perlite or bark.',
+  re_potting: "Re-potting should take place in the summer, after the year's bloom has finished. Remember to water the plant regularly to promote the growth of a healthy root system during its first year in the new pot.",
+  level_of_care: "Beware of the insect and do not expose the plant to too much humidity"
 )
-parlor_palm = Plant.create!(
-  name:         'Parlor Palm',
-  latin_name: 'Chamaedorea Elegans',
-  remote_photo_url:      parlor,
+golden_barrel_cactus = Plant.create!(
+  name:         'Golden Barrel Cactus',
+  latin_name: 'Echinocactus Grusonii',
+  remote_photo_url:      barrel,
+  water_freq:  7,
+  temperature: 'emperatures averaging 50°F/10°C - 75°F/23.8°C are ideal but not below 40°F/5°C and avoid frost.',
+  light: "lenty of sunshine will keep this cacti more than happy. In a glass room you may have to provide some shade during a hot summers day to prevent sunburn.",
+  watering: 'From spring until fall; water similar to many other house plants by watering when the soil begins drying. Before and during winter barely water the plant. Overwatering, especially when the temperature becomes cold can rot this species.',
+  soil: 'A pot mixture used for cactus plants that drains well will suffice. Adding gravel or small pebbles at the bottom first few inches of the pot will encourage drainage.',
+  re_potting: "When they are young and growing it's best to re-pot these once a year; during spring in a slightly bigger container. Once they mature re-pot maybe every 2 - 3 years or when necessary.",
+  level_of_care: 'Provide as much fresh air as you can if you keep the plant inside'
+)
+boston_fern = Plant.create!(
+  name:         'Boston Fern',
+  latin_name: 'Nephrolepis Exaltat',
+  remote_photo_url:      boston,
+  water_freq:  3,
+  temperature: 'The ideal room temperatures for Boston ferns is between 60-75ºF (16-24ºC). No lower than 55ºF (13ºC). Avoid warm air from indoor heating and cold drafts.',
+  light: "In their natural habitat these ferns will be provided small amounts of sunshine under trees, shaded. The best light conditions to provide is indirect sunlight, although a small amount of sunlight (when it's not too hot) encourages growth. Filtered sunlight through net curtains works well. You may want to rotate the plant to encourage even growth of the fronds.",
+  watering: 'Moist soil at all times is advisable, without the soil becoming soggy.',
+  soil: 'Peat moss potting soil mixes are best suited with perlite added combined with all-purpose soil. The soil needs to be able to retain some water but also have the ability to drain fairly well. Too much peat moss then water can become clogged and too much perlite with all-purpose will drain too quickly.',
+  re_potting: " Re-potting is done during spring once every 2 years while it's growing fast to a pot size bigger. Still change the top soil each spring even if a pot change is not required.",
+  level_of_care: 'Make sure the soil is always well moisturized. Ferns like humidity'
+)
+donkeys_tail_plant = Plant.create!(
+  name:         'Donkeys Tail Plant',
+  latin_name: 'Sedum Morganianum',
+  remote_photo_url:      donkey,
+  water_freq:  14,
+  temperature: 'Temperatures averaging 65°F/18°C - 80°F/26°C are very good and not much below 50°F/10°C. During winter it is fine if the temperature drops down and it can encourage them to actually bloom in the forthcoming spring season.',
+  light: "For this species to grow well you will need to at least provide a good amount of direct light. And, if you can sunshine, but not too much during the afternoon summer sun.",
+  watering: " During the growing season from April - September water the plant thoroughly and then water when the soil becomes dry to the touch. During winter cut down on the watering, which the plant may only need once a month. Remember it's a succulent and stores water in it leaves and stems...when you think it's lacking water it is not. Underwatering is much safer that overwatering and it's the No 1 killer for this plant."
+  soil: ' Potting mix that keeps the roots well aerated and drains well is required. To keep it simple I would pot up with a ready made cactus soil mix.',
+  re_potting: "You will only need to repot this plant during spring when the existing pot has become to small for it and use a shallow pot (the roots do not grow very long).",
+  level_of_care: "This plant doesn't need too much attention, be very careful not to over-water it"
+)
+venus_fly_trap = Plant.create!(
+  name:         'Venus Fly Trap',
+  latin_name: 'Dionaea Muscipula',
+  remote_photo_url:      fly_trap,
+  water_freq:  6,
+  temperature: 'These plants are happiest between 60°- 90°F (15°- 32°C) for most of the year. During the winter months, they enter a dormancy period, and can withstand temperatures as low as 30°F (-1°C) for short periods of time.',
+  light: "Dionaea Muscipula is a light demanding plant. For optimal health conditions, it requires at least 12 hours of light a day. At least 4 of those should be full sunlight.",
+  watering: 'They like their growing medium to be kept moist at all times, but never to the point of soggy. They are best watered through bottom-watering systems (water tray). Water should always be distilled before providing to the plant, as the chemicals in typical tap water are poisonous to the root system.',
+  soil: 'This plant demands nutrient poor soil. Peat moss and long fiber sphagnum moss should be mixed in a 1:1 ratio for the best growing conditions.',
+  re_potting: "These plants can be re-potted at any time other than their dormancy period.",
+  level_of_care: "Don't forget to feed it with actual flies"
+)
+cool_plant = Plant.create!(
+  name:         'Cool Plant',
+  latin_name: 'Cannabis Indica',
+  remote_photo_url:      cool,
+  water_freq:  4,
+  temperature: 'These plants are coolest between 60°- 90°F (15°- 32°C) for most of the year.',
+  light: "This plant needs a lot of light but has to be hidden in some part of the world to avoid problems",
+  watering: "The Cool Plant needs a average amount of water, to be honest I don't know mush about it, I only added it for the joke",
+  soil: 'Potting mix that keeps the roots well aerated and drains well is required.',
+  re_potting: "You need to rePot ;) after each floraison",
+  level_of_care: 'This plant need a particularly special attention'
+)
+umbrella_tree = Plant.create!(
+  name:         'Umbrella Tree ',
+  latin_name: 'Schefflera Arboricola',
+  remote_photo_url:      umbrella,
   water_freq:  8,
-  temperature: '',
-  light: "",
-  watering: '',
-  soil: '',
-  re_potting: "",
-  level_of_care: ''
+  temperature: 'Grows well in average room temperatures between 60 - 75 °F (15 - 24°C) but no lower than 55F (13C) or higher than 75°F (24°C). Avoid sudden temperature drops and cold drafts.',
+  light: "asic light condition of bright without direct sunlight is best suited, although lower lighting conditions only really affects it's growth rate rather than causing any harm.",
+  watering: 'The best advice is to water once the top soil becomes dry. Over-watering is more of a problem than lack of water.',
+  soil: 'A peat moss based potting mix with 2 parts peat moss and 1 part perlite is suggested.',
+  re_potting: "ou will need to re-pot the plant once every 2 years and provide new potting mix, during spring. To be on the safe side - hold of feeding for one month because enough nutrients should be present in the new potting mix. A good solid and heavy container is needed to prevent tall and mature trees from toppling over.",
+  level_of_care: 'Toxic to pets'
 )
 
 puts 'Creating users...'
