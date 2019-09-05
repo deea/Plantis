@@ -10,28 +10,30 @@
 
 <div class="jungle-content">
   <div class="seed-status-container">
-    <%= render './shared/user-avatar',user: @user %>
-    <div class="seed-status-text">
-      <%= link_to user_path(@user) do %>
-        <h6> <%= @user.firstname %></h6>
-        <h6> <%= @user.followers.size %> <%= "follower".pluralize(@user.followers.size) %> <%= @user.seeds %> seeds!</h6>
-      <% end %>
-    </div>
-    <div class="btn-add-container">
-      <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
-      <% unless current_user == @user %>
-        <%= link_to "Follow", follow_user_path(@user), :method => :post, class: "btn btn-primary"  %>
-      <% end %>
-    </div>
+      <div class="chris-card">
+        <%= render './shared/user-avatar',user: @user %>
+        <div class="seed-status-text">
+          <%= link_to user_path(@user) do %>
+            <h6> <%= @user.firstname %></h6><span class="badge badge-pill badge-primary badge-jungle"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
+            <p> <small> <%= @user.followers.size %> <%= "follower".pluralize(@user.followers.size) %> | <%= @user.seeds %> seeds!</small></p>
+          <% end %>
+        </div>
+      </div>
+        <div class="btn-add-container">
+          <%= link_to "Add Plant", plants_path, class: "btn btn-primary" %>
+          <% unless current_user == @user %>
+            <%= link_to "Follow", follow_user_path(@user), :method => :post, class: "btn btn-primary"  %>
+          <% end %>
+        </div>
   </div>
   <div class="jungle-plant-main-container">
     <div class="jungle-plant-main-container-sub">
 
-      <h2>
-        Plants that need watering
-      </h2>
+      <h4>
+        PLANTS THAT NEED WATER
+      </h4>
       <% if @plants_to_water.empty? %>
-        <h4><em>(none)</em></h4>
+        <h6><em>Hooray nobody's thirsty!</em></h6>
       <% end %>
       <div class="jungle-card-container">
         <% @plants_to_water.each do |plant| %>
@@ -40,9 +42,9 @@
         <% end %>
 
       </div>
-      <h2>
-        Plants that are thriving
-      </h2>
+      <h4>
+        PLANTS THAT ARE THRIVING
+      </h4>
       <div class="jungle-card-container">
         <% @plants_to_not_water.each do |plant| %>
           <%= render 'shared/user-plant-card', plant: plant %>
@@ -50,30 +52,9 @@
         <% end %>
       </div>
     </div>
-
-<!--     <div class="social">
-      <div class="search-form">
-        <form action="/users" method="get" class="form-inline my-2 my-lg-0">
-          <input name="navsearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0 btn-primary" type="submit" ><i class="fas fa-search"></i></button>
-        </form>
-      </div> -->
-     <!--  <div class="users">
-        <h4>
-          Users
-        </h4>
-        <%=  @users %>
-      </div> -->
-<!--     <h3>Upcoming Events</h3>
-    <br>
-    <div id="calendar" data-events="<%= current_user.user_plants.create_calendar_details %>"></div> -->
- <!--    <br>
-    <br>
-    <br>
-    <br> -->
     <div class="this-week-outer">
       <div class="this-week-container">
-      <h3>This week</h3>
+      <h6>COMING UP THIS WEEK</h6>
       <%= render "./shared/cal-card", plants: @user_plants%>
 
       </div>
