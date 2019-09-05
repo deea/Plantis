@@ -4,7 +4,9 @@
   margin: 0 auto;
   padding-top: 50px;
 }
-
+.form-inline {
+  justify-content: center;
+}
 .banner-plants {
   width: 100%;
   // background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("banner-plants.jpg");
@@ -20,7 +22,31 @@
 
 .plants-header {
   margin: 0;
-  padding: 40px;
+  padding:-10px;
+}
+
+.plants-header p {
+  padding: 20px;
+}
+
+.header-p {
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.h3-add {
+  margin-bottom: 30px
+}
+.search-form {
+  text-align: center;
+}
+
+.btn-add {
+  margin: 25px;
+  bottom: 345px;
+  margin: 25px;
+  position: absolute;
+  left: 1240px;
 }
 
 .cards {

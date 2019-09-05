@@ -20,9 +20,14 @@
             <h5><%= plant.plant.name %></h5>
             <i>(<%= plant.plant.latin_name %>)</i>
           </div>
-          <p>It's time to water <%= plant.nickname %></p>
-          <%= link_to "Click to Water!", water_plant_path(plant), method: :patch, class: "btn btn-primary modal-water-action"  %>
-          <p> <%= link_to "My plant has died", user_plant_path(plant), method: :delete, class: "btn btn-warning plant-died" %> </p>
+          <% if plant.needs_water? %>
+            <p><%= image_tag "watering-can.png", alt: "watering can", class: "cal-water-logo water-logo-time-to" %>It's time to water <%= plant.nickname %></p>
+            <%= link_to "Click to Water!", water_plant_path(plant), method: :patch, class: "btn btn-primary modal-water-action"  %>
+            <p> <%= link_to "My plant has died", user_plant_path(plant), method: :delete, class: "btn btn-warning plant-died" %> </p>
+          
+        <% else %>
+          <%= render "shared/modal-info", plant: plant %>
+        <% end %>
         </div>
       </div>
       <div class="modal-water-footer">
