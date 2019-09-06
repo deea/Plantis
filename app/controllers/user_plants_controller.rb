@@ -65,6 +65,7 @@ class UserPlantsController < ApplicationController
     @user_plant.user.user_level
     @user_plant.user.save
     redirect_to user_plants_path
+    flash[:notice] = '+ 20 seeds!'
   end
 
   def water_anyway
