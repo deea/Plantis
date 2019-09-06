@@ -6,10 +6,11 @@
   </div>
   <div class="profile-content">
     <div class="current-seeds">
-        <h2>Seeds: <%= @user.seeds %></h2>
+        <h3> Level : <%= @user.level %> | Seeds: <%= @user.seeds %></h3>
         <div class="level">
-          <h2>Level : <%= @user.level %></h2>
-          <span class="badge badge-pill badge-primary"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
+        </div>
+        <div class="user-badge-container">
+          <span class="badge badge-pill badge-primary badge-user-show"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
         </div>
         <br>
           <div class="progress">
