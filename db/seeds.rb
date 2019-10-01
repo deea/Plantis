@@ -25,7 +25,7 @@ barrel = 'https://www.worldseedsupply.com/wp-content/uploads/1970/01/170597_1078
 boston = 'https://img.crocdn.co.uk/images/products2/pl/20/00/02/77/pl2000027735.jpg?width=940&height=940'
 donkey = 'https://images.immediate.co.uk/production/volatile/sites/10/2018/08/c8d01d86-da6a-44e8-ac2b-8eaa0358e8bf-ed06cc9.jpg?quality=45&resize=960,640'
 fly_trap = 'https://cdn.nurserylive.com/images/stories/virtuemart/product/resized/nurserylive-venus-flytrap-dionaea-muscipula-plant_600x600.jpg'
-cool = 'https://www.alchimiaweb.com/blog/wp-content/uploads/2011/02/planta-acabada-de-trasplantar-a-11l.jpg'
+rat_tail = 'https://www.houseplantsexpert.com/image-files/rats-tail-cactus-flowering.jpg'
 umbrella = 'https://asepsis-kenya.com/wp-content/uploads/2018/12/scheffella-plant.jpg'
 
 spider_plant = Plant.create!(
@@ -104,7 +104,7 @@ corn_plant = Plant.create!(
   watering: 'We would advise a grower to keep the soil slightly damp to the touch and in the winter slightly dry.',
   soil: 'Most well draining potting soil mix types are fine to use.',
   re_potting: "Once very 2 -3 years and a pot one size bigger if it's becoming terribly pot bound. Slightly pot bound is fine.",
-  level_of_care: 'This plant need little care, though be careful with your pets, this plant is toxic for cats and dogs'
+  level_of_care: 'This plant needs little care, though be careful with your pets, it is toxic for cats and dogs.'
 )
 parlor_palm = Plant.create!(
   name:         'Parlor Palm',
@@ -116,19 +116,19 @@ parlor_palm = Plant.create!(
   watering: "Watering the parlor palm too much will cause growing problems and could possibly kill it off. A small amount of watering once the soil starts to dry. Very little is needed in the winter. Making sure the roots have good drainage is something they like.",
   soil: 'Any decent potting mix will suffice (soil or soilless).',
   re_potting: "Re-pot only when necessary, like when it becomes pot bound, because these do not like being disturbed too often .",
-  level_of_care: 'This plant need few attention.'
+  level_of_care: 'This plant needs little attention.'
 )
-cool_plant = Plant.create!(
-  name:         'Cool Plant',
-  latin_name: 'Cannabis Sativa',
-  remote_photo_url:      cool,
-  water_freq:  4,
-  temperature: 'These plants are coolest between 60°- 90°F (15°- 32°C) for most of the year.',
-  light: "This plant needs a lot of light but has to be hidden in some part of the world to avoid problems",
-  watering: "The Cool Plant needs a average amount of water, to be honest I don't know mush about it, I only added it for the joke",
-  soil: "Potting mix that keeps the roots well aerated and drains well is required.",
-  re_potting: "You need to rePot ;) after each floraison",
-  level_of_care: 'This plant need a particularly special attention'
+rat_tail_plant = Plant.create!(
+  name:         'Rat\'s Tail',
+  latin_name: 'Aporocactus Flagelliformis',
+  remote_photo_url:      rat_tail,
+  water_freq:  5,
+  temperature: 'Temperatures averaging 50°F/10°C - 75°F/23.8°C are ideal but not below 40°F/5°C and avoid frost',
+  light: 'The rat tail cactus thrives on bright light, but not direct sunlight. It also enjoys the warmth of the summer sun while it sits within a shaded area. Some sunlight and shade is great.',
+  watering: 'It\'s advisable to water this plant frequently within the summer and much less winter time. Add water at the top of the pot or container and allow it to seep through to the drainage holes, then remove the excess water from the pot tray. Keeping the soil slightly moist is also advisable within the summer.',
+  soil: 'A pot mixture used for cactus plants will suffice.',
+  re_potting: 'Re-potting every 2 -3 years is advised and when it becomes pot bound. Remember the spines can be prickly so you may want to wear protective gloves while re-potting.',
+  level_of_care: 'Easy to look after.'
 )
 lucky_bamboo_plant = Plant.create!(
   name:         'Lucky Bamboo Plant',
@@ -148,11 +148,11 @@ aluminium_plant = Plant.create!(
   remote_photo_url:      alu,
   water_freq:  5,
   temperature: 'Pilea cadierei requires a year-round temperature between 60-75 ºF (15-23 ºC). It can tolerate short periods of time outside of this temperature range, but continued exposure will kill the plant.',
-  light: "his plant requires at least four hours of indirect, but bright, sunlight a day. Do not permit this plant to be exposed to overly bright or direct sunlight. Too much sun will burn the leaves and cause the green parts to turn brown.",
-  watering: "The Aluminum plant needs to be watered differently during different times of the year. During spring and summer, the top quarter inch of the soil should be kept moist. During fall and winter, allow the top quarter inch of soil to dry out before watering again. Do not permit water to stand in the saucer underneath the plant.",
+  light: 'This plant requires at least four hours of indirect, but bright, sunlight a day. Do not permit this plant to be exposed to overly bright or direct sunlight. Too much sun will burn the leaves and cause the green parts to turn brown.',
+  watering: 'The Aluminum plant needs to be watered differently during different times of the year. During spring and summer, the top quarter inch of the soil should be kept moist. During fall and winter, allow the top quarter inch of soil to dry out before watering again. Do not permit water to stand in the saucer underneath the plant.',
   soil: "This plant prefers a sandy soil mixture to live in. Combine one part clean sand (or perlite) with two parts peat to provide the required soil content for continued health.",
-  re_potting: "Check the root density of Pilea cadierei every spring. If the roots are becoming overly dense, transplant the plant to a size larger pot. If you do not, the root system will break the container in an attempt to find more room to grow.",
-  level_of_care: 'Trim the leaves when they turn yellow. Be careful with bugs that tend to eat the green part of the leaves'
+  re_potting: 'Check the root density of Pilea cadierei every spring. If the roots are becoming overly dense, transplant the plant to a size larger pot. If you do not, the root system will break the container in an attempt to find more room to grow.',
+  level_of_care: 'Trim the leaves when they turn yellow. Be careful with bugs that tend to eat the green part of the leaves.'
 )
 dumb_cane = Plant.create!(
   name:         'Dumb Cane',
@@ -163,8 +163,8 @@ dumb_cane = Plant.create!(
   light: "This plant prefers bright, indirect sun light for the optimal growth. It will accept lighting conditions up to full shade and continue stunted growth. Full sun will burn the leaves.",
   watering: "For the best results, keep the dumb cane plant's top inch of soil moist at all times. It will tolerate extended periods of watering neglect, but the leaves will begin to shrivel. Watering makes the leaves stiffen. Before moving the plant, allow the soil to dry out. This will give the leaves a more rubbery texture which will better survive the handling process.",
   soil: "This plant is not picky about its soil conditions. It will grow in almost any soil mix except sand and orchid mixtures. For best results, a one to one mixture of potting soil and perlite should be used.",
-  re_potting: "This plant needs to have its root density checked annually in the spring. If the roots are becoming dense, re-pot into a size bigger pot. Reduce watering for a week before transplant.",
-  level_of_care: 'This plant need relative cares, especially during the bloom period, Buds that turn brown have to be immediately removed'
+  re_potting: "Needs to have its root density checked annually in the spring. If the roots are becoming dense, re-pot into a size bigger pot. Reduce watering for a week before transplant.",
+  level_of_care: 'This plant needs relative care, especially during the bloom period, buds that turn brown have to be immediately removed'
 )
 panda_plant = Plant.create!(
   name:         'Panda Plant',
@@ -200,7 +200,7 @@ green_velvet = Plant.create!(
   watering: 'During the spring and summer water the plant thoroughly when the top soil starts to become slightly dry to the touch. Cut right back on watering during winter.',
   soil: 'Using a fast draining peat based potting mix will do the trick. If your using your own mix it will need to include perlite or sand and bark to improve drainage.',
   re_potting: "The Alocasia should not need to be repotted very often after it has matured. Once very 2 years in a slightly bigger pot if it has grown much or if not just make a complete soil change – keeping the same pot. Use a clay pot if you can, because it will help dry the soil out quicker and may improve humidity being under the plant.",
-  level_of_care: 'The plant needs a special care during winter'
+  level_of_care: 'The plant needs special care during winter.'
 )
 peruvian_apple = Plant.create!(
   name:         'Peruvian Apple',
@@ -212,7 +212,7 @@ peruvian_apple = Plant.create!(
   watering: "It's advisable to water this plant more often within the summer and much less, winter time. Like other desert type cacti their natural habitat is dry and they store water within the stems. Water this plant when the soil begins drying out, throughout spring and late summer. In late summer reduce watering until the next spring and allow the soil to be fairly dry.",
   soil: 'A fast draining pot mixture used for cactus plants is ideal.',
   re_potting: "While they're young they can be re-potted each year in spring. Once they mature re-pot only when necessary, with a slightly larger pot.",
-  level_of_care: 'Minimum care is needed'
+  level_of_care: 'Minimum care needed.'
 )
 bunny_ears = Plant.create!(
   name:         'Bunny Ears',
@@ -224,19 +224,19 @@ bunny_ears = Plant.create!(
   watering: "The Polka-dot Cactus is a desert species. It should be given water on a regular basis during its first season in a new pot. This will help it to create a strong root system. The soil should be kept moist, but not soggy. After the first season, more sporadic watering is required. During the winter cycle, the cactus should not be watered at all, with watering to resume in the early spring.",
   soil: 'Like most cacti, this specimen demands sandy soil-bases that drain easily. It is usually happy with the pre-packaged cactus soil found in common hardware stores. To increase drainage for a picky plant, mix in a 1:1 ratio of perlite or bark.',
   re_potting: "Re-potting should take place in the summer, after the year's bloom has finished. Remember to water the plant regularly to promote the growth of a healthy root system during its first year in the new pot.",
-  level_of_care: "Beware of the insect and do not expose the plant to too much humidity"
+  level_of_care: "Beware of the insect and do not expose the plant to too much humidity."
 )
 golden_barrel_cactus = Plant.create!(
   name:         'Golden Barrel Cactus',
   latin_name: 'Echinocactus Grusonii',
   remote_photo_url:      barrel,
   water_freq:  7,
-  temperature: 'emperatures averaging 50°F/10°C - 75°F/23.8°C are ideal but not below 40°F/5°C and avoid frost.',
+  temperature: 'Temperatures averaging 50°F/10°C - 75°F/23.8°C are ideal but not below 40°F/5°C and avoid frost.',
   light: "lenty of sunshine will keep this cacti more than happy. In a glass room you may have to provide some shade during a hot summers day to prevent sunburn.",
   watering: 'From spring until fall; water similar to many other house plants by watering when the soil begins drying. Before and during winter barely water the plant. Overwatering, especially when the temperature becomes cold can rot this species.',
   soil: 'A pot mixture used for cactus plants that drains well will suffice. Adding gravel or small pebbles at the bottom first few inches of the pot will encourage drainage.',
   re_potting: "When they are young and growing it's best to re-pot these once a year; during spring in a slightly bigger container. Once they mature re-pot maybe every 2 - 3 years or when necessary.",
-  level_of_care: 'Provide as much fresh air as you can if you keep the plant inside'
+  level_of_care: 'Provide as much fresh air as you can if you keep the plant inside.'
 )
 boston_fern = Plant.create!(
   name:         'Boston Fern',
@@ -248,7 +248,7 @@ boston_fern = Plant.create!(
   watering: 'Moist soil at all times is advisable, without the soil becoming soggy.',
   soil: 'Peat moss potting soil mixes are best suited with perlite added combined with all-purpose soil. The soil needs to be able to retain some water but also have the ability to drain fairly well. Too much peat moss then water can become clogged and too much perlite with all-purpose will drain too quickly.',
   re_potting: " Re-potting is done during spring once every 2 years while it's growing fast to a pot size bigger. Still change the top soil each spring even if a pot change is not required.",
-  level_of_care: 'Make sure the soil is always well moisturized. Ferns like humidity'
+  level_of_care: 'Make sure the soil is always well moisturized. Ferns like humidity.'
 )
 donkeys_tail_plant = Plant.create!(
   name:         'Donkeys Tail Plant',
@@ -260,7 +260,7 @@ donkeys_tail_plant = Plant.create!(
   watering: "During the growing season from April - September water the plant thoroughly and then water when the soil becomes dry to the touch. During winter cut down on the watering, which the plant may only need once a month. Remember it's a succulent and stores water in it leaves and stems...when you think it's lacking water it is not. Underwatering is much safer that overwatering and it's the No 1 killer for this plant.",
   soil: "Potting mix that keeps the roots well aerated and drains well is required. To keep it simple I would pot up with a ready made cactus soil mix.",
   re_potting: "You will only need to repot this plant during spring when the existing pot has become to small for it and use a shallow pot (the roots do not grow very long).",
-  level_of_care: "This plant doesn't need too much attention, be very careful not to over-water it"
+  level_of_care: "This plant doesn't need too much attention, be very careful not to over-water it."
 )
 venus_fly_trap = Plant.create!(
   name:         'Venus Fly Trap',
@@ -272,7 +272,7 @@ venus_fly_trap = Plant.create!(
   watering: 'They like their growing medium to be kept moist at all times, but never to the point of soggy. They are best watered through bottom-watering systems (water tray). Water should always be distilled before providing to the plant, as the chemicals in typical tap water are poisonous to the root system.',
   soil: 'This plant demands nutrient poor soil. Peat moss and long fiber sphagnum moss should be mixed in a 1:1 ratio for the best growing conditions.',
   re_potting: "These plants can be re-potted at any time other than their dormancy period.",
-  level_of_care: "Don't forget to feed it with actual flies"
+  level_of_care: "Don't forget to feed it with actual flies."
 )
 umbrella_tree = Plant.create!(
   name:         'Umbrella Tree ',
@@ -284,7 +284,7 @@ umbrella_tree = Plant.create!(
   watering: 'The best advice is to water once the top soil becomes dry. Over-watering is more of a problem than lack of water.',
   soil: 'A peat moss based potting mix with 2 parts peat moss and 1 part perlite is suggested.',
   re_potting: "You will need to re-pot the plant once every 2 years and provide new potting mix, during spring. To be on the safe side - hold of feeding for one month because enough nutrients should be present in the new potting mix. A good solid and heavy container is needed to prevent tall and mature trees from toppling over.",
-  level_of_care: 'Toxic to pets'
+  level_of_care: 'Easy to maintain but be careful as it is toxic to pets.'
 )
 
 puts 'Creating users...'
